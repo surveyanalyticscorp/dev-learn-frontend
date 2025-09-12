@@ -1,19 +1,50 @@
-/* CSS Variables for the new color palette */
 :root {
-  --dark-blue: #1b3380;
-  --electric-blue: #1b87e6;
-  --lead-blue: #545e6b;
-  --text-light: #f0f8ff; /* AliceBlue */
+  --font-family: "Comic Neue", sans-serif;
+
+  --primary-bg-color: #1b3380;
+  --primary-text-color: #f0f8ff;
+  --accent-color: #1b87e6;
+  --accent-color-gradient: #57a8eb;
+  --secondary-bg-color: #545e6b;
+  --secondary-text-color: #f0f8ff;
+  --code-bg-color: rgba(0, 0, 0, 0.2);
+  --nav-button-text-color: white;
+  --pagination-dot-hover-color: #8d97a2;
+}
+
+[data-theme="dark"] {
+  --primary-bg-color: #1b3380;
+  --primary-text-color: #f0f8ff;
+  --accent-color: #1b87e6;
+  --accent-color-gradient: #57a8eb;
+  --secondary-bg-color: #545e6b;
+  --secondary-text-color: #f0f8ff;
+  --code-bg-color: rgba(0, 0, 0, 0.2);
+  --nav-button-text-color: white;
+  --pagination-dot-hover-color: #8d97a2;
+}
+
+[data-theme="light"] {
+  --primary-bg-color: #f0f8ff;
+  --primary-text-color: #1b3380;
+  --accent-color: #1b87e6;
+  --accent-color-gradient: #57a8eb;
+  --secondary-bg-color: #e6e6e6;
+  --secondary-text-color: #1b3380;
+  --code-bg-color: rgba(0, 0, 0, 0.1);
+  --nav-button-text-color: #1b3380;
+  --pagination-dot-hover-color: #cccccc;
 }
 
 /* Basic Setup */
 body {
-  font-family: "Fira Sans", sans-serif;
-  background-color: var(--dark-blue);
-  color: var(--text-light);
+  font-family: var(--font-family);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
   overflow: hidden;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Slideshow Container */
@@ -65,13 +96,13 @@ h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--electric-blue);
+  color: var(--accent-color);
 }
 h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--electric-blue);
+  color: var(--accent-color);
 }
 p {
   font-size: 1.25rem;
@@ -80,16 +111,16 @@ p {
 .gradient-text {
   background-image: linear-gradient(
     to right,
-    var(--electric-blue),
-    #57a8eb
+    var(--accent-color),
+    var(--accent-color-gradient)
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .code-highlight {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: var(--text-light);
+  background-color: var(--code-bg-color);
+  color: var(--secondary-text-color);
   padding: 0.125rem 0.5rem;
   border-radius: 0.375rem;
   font-weight: bold;
@@ -103,9 +134,10 @@ p {
   text-align: left;
 }
 .discipline-card {
-  background-color: var(--lead-blue);
+  background-color: var(--secondary-bg-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 .analogy-list {
   list-style: none;
@@ -119,29 +151,29 @@ p {
 .analogy-list strong {
   display: block;
   font-size: 2.25rem;
-  color: var(--electric-blue);
+  color: var(--accent-color);
 }
 .quote {
   font-style: italic;
-  border-left: 4px solid var(--electric-blue);
+  border-left: 4px solid var(--accent-color);
   padding-left: 1.5rem;
   margin-top: 2rem;
 }
 .quote strong {
-  color: var(--electric-blue);
+  color: var(--accent-color);
 }
 
 /* Navigation */
 .nav-button {
   position: fixed;
   bottom: 1rem;
-  background-color: var(--lead-blue);
-  color: white;
+  background-color: var(--secondary-bg-color);
+  color: var(--nav-button-text-color);
   border: none;
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 10;
   width: 48px;
   height: 48px;
@@ -150,7 +182,7 @@ p {
   align-items: center;
 }
 .nav-button:hover {
-  background-color: var(--electric-blue);
+  background-color: var(--accent-color);
 }
 #prev {
   left: 1rem;
@@ -173,17 +205,17 @@ p {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--lead-blue);
+  background-color: var(--secondary-bg-color);
   border: none;
   cursor: pointer;
   padding: 0;
   transition: background-color 0.3s ease;
 }
 .pagination-dot:hover {
-  background-color: #8d97a2;
+  background-color: var(--pagination-dot-hover-color);
 }
 .pagination-dot.active {
-  background-color: var(--electric-blue);
+  background-color: var(--accent-color);
 }
 
 /* Media Queries for Responsiveness */
@@ -204,3 +236,23 @@ p {
     font-size: 1.75rem;
   }
 }
+
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--nav-button-text-color);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

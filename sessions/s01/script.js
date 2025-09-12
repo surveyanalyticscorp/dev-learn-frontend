@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.getElementById("next");
   const prevBtn = document.getElementById("prev");
   const paginationContainer = document.getElementById("pagination");
+  const themeToggle = document.getElementById("theme-toggle");
   let currentSlide = 0;
 
   if (slides.length === 0) return;
@@ -47,4 +48,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   showSlide(0);
+
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    if (currentTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  });
+
+  // Set initial theme
+  document.documentElement.setAttribute("data-theme", "dark");
 });
