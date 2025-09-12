@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (e.key === "ArrowLeft" || e.key === "k") {
       e.preventDefault();
       showSlide(currentSlide - 1);
+    } else if (e.key === "t") {
+      e.preventDefault();
+      themeToggle.click();
     }
   });
 
