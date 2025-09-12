@@ -44,7 +44,9 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Slideshow Container */
@@ -173,7 +175,9 @@ p {
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   z-index: 10;
   width: 48px;
   height: 48px;
@@ -237,6 +241,20 @@ p {
   }
 }
 
+#logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  width: 150px;
+  z-index: 1;
+}
+
+[data-theme="dark"] #logo {
+  filter: grayscale(100%) invert(100%);
+}
+
 #theme-toggle {
   position: fixed;
   top: 1rem;
@@ -247,7 +265,9 @@ p {
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   z-index: 10;
   width: 48px;
   height: 48px;
@@ -255,4 +275,3 @@ p {
   justify-content: center;
   align-items: center;
 }
-

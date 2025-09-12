@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
   prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight" || e.key === " ") {
+    if (e.key === "ArrowRight" || e.key === " " || e.key === "j") {
       e.preventDefault();
       showSlide(currentSlide + 1);
-    } else if (e.key === "ArrowLeft") {
+    } else if (e.key === "ArrowLeft" || e.key === "k") {
       e.preventDefault();
       showSlide(currentSlide - 1);
     }
@@ -59,5 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Set initial theme
-  document.documentElement.setAttribute("data-theme", "dark");
+  document.documentElement.setAttribute("data-theme", "light");
 });
