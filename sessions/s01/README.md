@@ -1,5 +1,7 @@
 # Welcome to Frontend Engineering Session 01
 
+> Mon Sep 15, 2025
+
 ## Introduction
 
 This session is designed to take your frontend development skills to the next level by focusing on engineering principles and advanced concepts.
@@ -45,4 +47,3 @@ We'll explore practical scenarios like:
 - Learn engineering best practices
 - Understand how frontend works at scale
 - Master advanced development concepts
-
