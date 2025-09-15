@@ -1,7 +1,5 @@
 # Contributing to the Dev Learning Sessions
 
-First off, thank you for considering contributing! These sessions are a community effort, and we welcome any and all contributions. This document provides a set of guidelines to help you contribute effectively.
-
 ## The Goal
 
 The main goal of this repository is to serve as a "gallery" of everyone's work for each session. Instead of overwriting or modifying the base session files, you will create your own folder and work within it. This allows us to see how different developers approached the same problem.
