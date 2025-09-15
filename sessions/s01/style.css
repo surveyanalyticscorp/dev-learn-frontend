@@ -275,3 +275,46 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+/* Hosts info */
+.hosts-info {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.hosts-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: var(--primary-text-color);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+
+.hosts-names {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.host-name {
+  color: var(--accent-color);
+  font-weight: bold;
+  background: var(--code-bg-color);
+  padding: 0.2rem 0.75rem;
+  border-radius: 4px;
+}
+
+.host-team {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.host-separator {
+  opacity: 0.5;
+  margin: 0 0.25rem;
+}
