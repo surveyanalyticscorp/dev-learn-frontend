@@ -1,4 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Key popup functionality
+  const keyPopup = document.getElementById("key-popup");
+  let keyPopupTimeout;
+
+  const showKeyPopup = (key, action = "") => {
+    // Clear any existing timeout
+    if (keyPopupTimeout) {
+      clearTimeout(keyPopupTimeout);
+    }
+
+    // Update popup content
+    keyPopup.innerHTML = `
+      <span class="key">${key}</span>
+      ${action ? `<span class="action">${action}</span>` : ''}
+    `;
+
+    // Show popup
+    keyPopup.classList.add("show");
+
+    // Hide popup after 1 second
+    keyPopupTimeout = setTimeout(() => {
+      keyPopup.classList.remove("show");
+    }, 1000);
+  };
+
+  // Add global keydown listener for all keys
+  document.addEventListener("keydown", (e) => {
+    const key = e.key === " " ? "Space" : e.key;
+    showKeyPopup(key);
+  });
   const slides = document.querySelectorAll(".slide");
   const nextBtn = document.getElementById("next");
   const prevBtn = document.getElementById("prev");
