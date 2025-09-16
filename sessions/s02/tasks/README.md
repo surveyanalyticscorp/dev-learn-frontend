@@ -22,7 +22,6 @@
 7. **Card Actions** – Style the **second button** inside `.card` that has an `<img>`.
 8. **Nested Menu** – Style **direct child `li` of first-level menu** and hover styles for nested `li`.
 9. **Auto Counters** – Automatically number `.step` items using CSS counters.
-10. **Complex Combination** – Style all external links not in footer (`a[target="_blank"]:not(footer a)`).
 
 ---
 
