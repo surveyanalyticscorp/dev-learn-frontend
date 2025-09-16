@@ -35,12 +35,12 @@ git checkout -b yourname-session-01
 
 **4. Create Your Personal Directory**
 
-Navigate to the session you are working on (e.g., `sessions/s01`). Inside that folder, create a new directory with your name or GitHub username.
+Navigate to the session you are working on (e.g., `sessions/s01/participants`). Inside that folder, create a new directory with your name or GitHub username.
 
 For example, if your name is Jane Doe and you're working on session 1:
 
 ```bash
-mkdir sessions/s01/jane-doe
+mkdir sessions/s01/participants/jane-doe
 ```
 
 **5. Copy the Base Files**
@@ -50,19 +50,19 @@ Copy the base files from the session's root directory into your new personal fol
 For example, for session 1:
 
 ```bash
-cp sessions/s01/index.html sessions/s01/script.js sessions/s01/style.css sessions/s01/jane-doe/
+cp sessions/s01/index.html sessions/s01/script.js sessions/s01/style.css sessions/s01/participants/jane-doe/
 ```
 
 **6. Make Your Changes**
 
-Now, do the work! **Only modify the files inside your personal folder** (e.g., `sessions/s01/jane-doe/`). This is your playground.
+Now, do the work! **Only modify the files inside your personal folder** (e.g., `sessions/s01/participants/jane-doe/`). This is your playground.
 
 **7. Commit Your Changes**
 
 Once you're happy with your changes, add your new folder to git and commit it with a clear message.
 
 ```bash
-git add sessions/s01/jane-doe
+git add sessions/s01/participants/jane-doe
 git commit -m "feat(s01): Add Jane Doe's submission for session 1"
 ```
 
