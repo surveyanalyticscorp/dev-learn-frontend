@@ -355,3 +355,43 @@ p {
   display: block;
   margin-top: 0.5rem;
 }
+
+/* Robot slide styling */
+.robot-slide h2 {
+  font-family: monospace;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  animation: blink 1s step-end infinite;
+}
+
+.terminal-output {
+  font-family: monospace;
+  background: #000;
+  color: #00ff00;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: left;
+  white-space: pre;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.robot-message {
+  font-family: monospace;
+  color: #00ff00;
+  animation: typing 3.5s steps(40, end);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
