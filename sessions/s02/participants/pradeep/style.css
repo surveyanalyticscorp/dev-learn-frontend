@@ -1,0 +1,118 @@
+/* === CSS Selectors Workshop Starter === */
+
+/* Task 1 */
+a[target="_blank"]::after {
+  content: " 🔗";
+}
+
+/* Task 2 */
+label:has(+ input:required)::after {
+  content: " *";
+  color: red;
+}
+
+/* Task 3 */
+.zebra-list li:nth-child(odd) {
+  background-color: #fff;
+  padding: 1%;
+}
+
+.zebra-list li:nth-child(even) {
+  background-color: silver;
+  padding: 1%;
+}
+
+/* Task 4 */
+h2 + p {
+  background-color: #fff3cd;
+  padding: 1%;
+}
+
+/* Task 5 */
+.box:first-of-type {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+.box:last-of-type {
+  background-color: lightgreen;
+  font-style: italic;
+}
+
+/* Task 6 */
+.form-field:has(input:invalid) {
+  background-color: #f8d7da;
+  border: 2px solid #dc3545;
+  border-radius: 6px;
+  padding: 1%;
+}
+
+.form-field:has(input:valid) {
+  background-color: #d4edda;
+  border: 2px solid #28a745;
+  border-radius: 6px;
+  padding: 1%;
+}
+
+/* Task 7 */
+.card:has(img) button:nth-child(3) {
+  background-color: red;
+  color: white;
+}
+
+/* Task 8 */
+.menu > li {
+  background-color: #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.menu > li:hover {
+  background-color: #1b87e6;
+  color: white;
+}
+
+.menu li ul li {
+  background-color: #f8f9fa;
+  margin-left: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: normal;
+  border-radius: 3px;
+}
+
+.menu li ul li:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Task 9 */
+.steps {
+  counter-reset: step-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.step {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.step::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #1b87e6;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
