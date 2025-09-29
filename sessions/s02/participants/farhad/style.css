@@ -1,0 +1,57 @@
+/* === CSS Selectors Workshop Starter === */
+
+/* Task 1 */
+#task-1 > a {
+  color: #e61b87; /* Electric Pink */
+}
+
+#task-1 > a[target="_blank"]::after {
+  content: "🔗";
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* Task 2 */
+label:has(+ input[required])::after {
+  content: " *";
+  color: red;
+  margin-left: 0.2em;
+}
+
+/* Task 3 */
+.zebra-list > li:nth-child(odd) {
+  background: #f5f7fa; /* light shade */
+}
+
+.zebra-list > li:nth-child(even) {
+  background: #e8eef3; /* slightly darker shade */
+}
+
+/* Task 4 */
+h2 + p {
+  background: #fff8d6;
+  border-left: 4px solid #ffcc40;
+  padding: 6px 10px;
+  margin-top: 0.3em;
+}
+
+/* Task 5 */
+#task-5 .box:first-of-type {
+  background: #e0f7ff; /* light blue */
+  border: 2px solid #1ba7e6;
+  font-weight: 600;
+}
+
+#task-5 .box:last-of-type {
+  background: #ffe7f5; /* light pink */
+  border: 2px solid #e61b87;
+  font-style: italic;
+}
+
+/* Task 6 */
+
+/* Task 7 */
+
+/* Task 8 */
+
+/* Task 9 */
