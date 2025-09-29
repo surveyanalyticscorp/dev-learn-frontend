@@ -1,0 +1,98 @@
+/* === CSS Selectors Workshop Starter === */
+
+/* Task 1 */
+a[target="_blank"] {
+    margin-right: 20px;
+}
+
+a[target="_blank"]::after {
+    content: "↗️";
+    margin-left: 4px;
+}
+
+/* Task 2 */
+label:has(+ input[required])::after {
+    content: " *";
+    color: red;
+}
+
+/* Task 3 */
+.zebra-list li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Task 4 */
+h2+p {
+    background-color: #ffffcc;
+    padding: 10px;
+}
+
+/* Task 5 */
+.box:first-of-type {
+    background-color: #11b2c7;
+}
+
+.box:last-of-type {
+    background-color: #ffe0b2;
+}
+
+/* Task 6 */
+.form-field>input:invalid {
+    border: 2px solid red;
+}
+
+.form-field>input:valid {
+    border: 2px solid green;
+}
+
+/* Task 7 */
+.card:has(img) button:nth-of-type(2) {
+    background-color: #f34a17;
+    color: white;
+}
+
+/* Task 8 */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+}
+
+.menu>li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu li:hover>ul {
+    display: block;
+}
+
+.menu ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul li {
+    display: block;
+}
+
+/* Task 9 */
+.step {
+    counter-reset: step;
+}
+
+.step li {
+    counter-increment: step;
+}
+
+.step li::before {
+    content: counter(step) ". ";
+    font-weight: bold;
+}
