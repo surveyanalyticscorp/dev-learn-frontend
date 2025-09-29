@@ -1,0 +1,67 @@
+/* === CSS Selectors Workshop Starter === */
+
+/* Task 1 */
+a[target^="_blank"]:after {
+  content: "\2197";
+}
+
+/* Task 2 */
+label:has(+ input[required]):after {
+  content: " *";
+  color: red;
+}
+
+/* Task 3 */
+.zebra-list li:nth-child(odd) {
+  background-color: #999;
+}
+
+/* Task 4 */
+h2 + p {
+  background-color: yellow;
+}
+
+/* Task 5 */
+.box:nth-child(2) {
+  background-color: lightgreen;
+}
+.box:last-child {
+  background-color: lightblue;
+}
+
+/* Task 6 */
+.form-field input:invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.form-field input:valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+
+/* Task 7 */
+.card:has(img) button:last-child {
+  border: 2px solid green;
+  background-color: lightgreen;
+  color: green;
+}
+/* Task 8 */
+.menu > li {
+  color: red;
+}
+
+.menu > li li:hover {
+  color: green;
+}
+
+/* Task 9 */
+/* Auto Counters – Automatically number .step items using CSS counters. */
+.step {
+  counter-increment: step;
+}
+
+.step::before {
+  content: "Step " counter(step) ": ";
+  font-weight: bold;
+}
