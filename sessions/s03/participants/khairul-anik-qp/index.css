@@ -1,0 +1,45 @@
+.hobby-list {
+    list-style: square;
+}
+
+.hobby-list li {
+    width: max-content;
+    list-style: square;
+    color: orange;
+    opacity: 0.4;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "lucida console", "Courier New", monospace;
+    transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.hobby-list li:hover {
+    opacity: 1;
+    color: red;
+    transform: scale(1.3);
+}
+
+.hobby-list li:hover+li {
+    color: blue;
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.hobby-list li:hover+li+li {
+    color: blue;
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+.hobby-list li:has(+ li:hover) {
+    color: green;
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.hobby-list li:has(+ li + li:hover) {
+    color: green;
+    opacity: 0.6;
+    transform: scale(1.1);
+}
