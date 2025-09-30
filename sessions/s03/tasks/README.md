@@ -12,7 +12,8 @@ Create layered hover interactions on a list using only CSS selectors. Hovering a
 1. The hovered item itself
 2. Its immediate previous and next siblings
 3. The second-level previous and next siblings (two steps away)
-4. Every other (alternating) list item in a consistent pattern
+4. Other items should have a distinct style.
+5. With no hover, all items should have a neutral style.
 
 ---
 
@@ -28,7 +29,7 @@ Create layered hover interactions on a list using only CSS selectors. Hovering a
 - Hovered item: scale or bold + highlight background.
 - Adjacent siblings: slight tint or underline.
 - Two-away siblings: reduced opacity or subtle border.
-- Alternating items: patterned background shift.
+- Other items: patterned background shift / low opacity.
 
 Keep contrast and accessibility in mind.
 
@@ -38,7 +39,8 @@ Keep contrast and accessibility in mind.
 
 See the screenshot for the intended layered visual relationships.
 
-![Expected Result](./screenshot.png)
+![Default](./default.png "Default")
+![Expected Result](./hovered.png "Hovered")
 
 ---
 
