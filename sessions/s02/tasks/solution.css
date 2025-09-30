@@ -1,0 +1,169 @@
+/* ==============================
+   CSS Selectors Workshop Solutions
+   Bizarre Visuals + Selector Philosophy
+   ============================== */
+
+/* Task 1: External Links */
+/* 
+  Philosophy: Indicate links that open in a new tab. 
+  Selector:
+    - #task-1 a[target="_blank"] → any <a> inside Task 1 with target="_blank"
+    - ::after → inserts content after the link text without changing HTML
+  Use: Improves UX by signaling external links visually.
+*/
+#task-1 a[target="_blank"]::after {
+  content: " 🛸"; /* UFO icon to emphasize */
+  color: hotpink;
+  margin-left: 10px;
+  font-size: 2em;
+}
+
+/* Task 2: Required Fields */
+/* 
+  Philosophy: Make required inputs obvious without changing HTML.
+  Selector:
+    - input[required] + label → selects a label immediately after a required input
+    - label:has(+ input[required])::after → selects labels immediately before required input
+  Use: Covers both HTML label patterns; adds visual emphasis on required fields.
+*/
+#task-2 input[required] + label,
+#task-2 label:has(+ input[required])::after {
+  content: " ⚠️";
+  color: lime;
+  font-size: 1.5em;
+}
+
+/* Task 3: Zebra List */
+/* 
+  Philosophy: Improve readability using alternating row colors.
+  Selector:
+    - .zebra-list li:nth-child(odd) → selects every odd li inside .zebra-list
+  Use: Makes odd rows visually distinct.
+*/
+#task-3 .zebra-list li:nth-child(odd) {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Task 4: Adjacent Highlight */
+/* 
+  Philosophy: Highlight first paragraph following a heading.
+  Selector:
+    - h2 + p → selects a <p> that comes immediately after an <h2>
+  Use: Highlights the lead paragraph without affecting others.
+*/
+#task-4 h2 + p {
+  background-color: magenta;
+  color: yellow;
+  border: 3px dashed cyan;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+/* Task 5: First/Last Styling */
+/* 
+  Philosophy: Emphasize the first and last elements in a container.
+  Selector:
+    - .box:first-child → first .box in its parent
+    - .box:last-child → last .box in its parent
+  Use: Highlights boundaries of a group visually.
+*/
+#task-5 .box:first-of-type,
+#task-5 .box:last-child {
+  border: 5px double lime;
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+/* Task 6: Form Validation */
+/* 
+  Philosophy: Provide instant feedback based on input validity.
+  Selector:
+    - .form-field:has(input:invalid) → container of invalid input
+    - .form-field:has(input:valid) → container of valid input
+  Use: Highlights the entire field, improving usability.
+*/
+#task-6 .form-field:has(input:invalid) {
+  border: 5px solid red;
+  background-color: yellow;
+  padding: 15px;
+}
+#task-6 .form-field:has(input:valid) {
+  border: 5px solid green;
+  background-color: cyan;
+  padding: 15px;
+}
+
+/* Task 7: Card Actions */
+/* 
+  Philosophy: Style specific buttons in cards that have images.
+  Selector:
+    - .card:has(img) → only cards containing an <img>
+    - > button:nth-of-type(2) → the second button directly inside the card
+  Use: Allows differentiation of actions like "Delete" in image cards.
+*/
+#task-7 .card:has(img) > button:nth-of-type(2) {
+  background-color: neonpink;
+  color: black;
+  font-size: 1.3em;
+  border: 3px dotted lime;
+}
+
+/* Task 8: Nested Menu */
+/* 
+  Philosophy: Distinguish top-level from nested menu items.
+  Selector:
+    - .menu > li → only direct children (top-level menu items)
+    - .menu li ul li:hover → nested submenu items on hover
+  Use: Makes menu hierarchy visually clear.
+*/
+#task-8 .menu > li {
+  font-weight: 900;
+  font-size: 1.4em;
+  color: purple;
+}
+#task-8 .menu li ul li:hover {
+  color: orange;
+  background-color: teal;
+  font-size: 1.2em;
+}
+
+/* Task 9: Auto Counters */
+/* 
+  Philosophy: Automatically number steps without hardcoding numbers.
+  Selector:
+    - .steps → container to reset counter
+    - .step::before → increments counter and displays it before each step
+  Use: Dynamic numbering for instructions, tutorials, or wizards.
+*/
+#task-9 .steps {
+  counter-reset: step-counter;
+}
+#task-9 .step::before {
+  counter-increment: step-counter;
+  content: "🚀 " counter(step-counter) " — ";
+  font-size: 1.5em;
+  color: red;
+}
+
+/* Task 10: Complex Combination */
+/* 
+  Philosophy: Style external links differently, except those in footer.
+  Selector:
+    - a[target="_blank"]:not(footer a) → external links outside footer
+    - hover → change styling on interaction
+  Use: Differentiates main content links from footer links, improves visual context.
+*/
+#task-10 a[target="_blank"]:not(footer a)::after {
+  content: " 👽";
+  color: lime;
+  font-size: 2em;
+}
+#task-10 a[target="_blank"]:not(footer a):hover {
+  color: magenta;
+  text-decoration: underline wavy yellow;
+}
