@@ -8,12 +8,10 @@
   font-family: sans-serif;
   list-style-type: square;
   width: max-content;
-  background-color: aqua;
 }
 
 .hobby-list li {
   transition: all 0.2s ease-in-out;
-  background-color: #ffeeff;
 }
 
 .hobby-list:has(li:hover) li:not(:hover) {
