@@ -1,0 +1,42 @@
+/* === CSS Selectors Workshop Starter === */
+
+/* Task 1 */
+
+
+a[target="_blank"]::after {
+    /* content: "↗️"; */
+    content: "\2197";
+    margin-left: 2px;
+    margin-right: 12px;
+}
+/* Task 2 */
+label:has(+ input[required])::after {
+    content: " *";
+    
+}
+/* Task 3 */
+.zebra-list li:nth-child(odd) {
+    background-color: #fafafa;
+}
+/* Task 4 */
+
+h2+p {
+    background-color: #fcfcbd;
+    padding: 12px;
+}
+
+/* Task 5 */
+.box:first-of-type {
+    background-color: #d5fdc2;
+}
+
+.box:last-of-type {
+    background-color: #ffef9f;
+}
+/* Task 6 */
+
+/* Task 7 */
+
+/* Task 8 */
+
+/* Task 9 */
