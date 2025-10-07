@@ -12,7 +12,7 @@
 
 ## CSS Mastery
 
-### Selector
+### [Selectors](/sessions/s04_css_selectors/README.md)
 
 - Basic selector
 - Combinator
