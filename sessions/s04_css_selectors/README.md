@@ -2,6 +2,8 @@
 
 This guide provides a comprehensive overview of CSS selectors, ranging from the most basic to more advanced concepts. Understanding selectors is fundamental to mastering CSS, as they are the patterns used to select and style HTML elements. Each section includes explanations, code examples, and a link to the relevant MDN (Mozilla Developer Network) documentation for a deeper dive.
 
+You can find the class recordings and materials for this session here: [CSS Selectors Session](https://drive.google.com/drive/folders/1NCXyMxOLUKR__0Z3QhOX3ZMlPRy4z4N8?usp=drive_link)
+
 ## Table of Contents
 
 1. [What is a CSS Selector?](what-is-a-css-selector)
