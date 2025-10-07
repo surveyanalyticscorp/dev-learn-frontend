@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Lab</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="solution.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>CSS Positioning Lab</h1>
+            <p>Complete each positioning challenge by editing <code>task.css</code></p>
+        </header>
+
+        <!-- Task 1: Relative Positioning -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 1: Relative Positioning</h2>
+                <p>Move the middle box 20px down and 10px right using relative positioning</p>
+            </div>
+            <div class="task-demo">
+                <div class="box-container">
+                    <div class="box">Box 1</div>
+                    <div class="box middle-box">Box 2</div>
+                    <div class="box">Box 3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 2: Absolute Positioning -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 2: Absolute Positioning</h2>
+                <p>Position the yellow circle in the bottom-right corner of the blue container</p>
+            </div>
+            <div class="task-demo">
+                <div class="parent-container">
+                    <span class="label">Parent Container</span>
+                    <div class="circle">Child</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 3: Fixed Positioning -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 3: Fixed Navigation</h2>  
+                <p>Make the navigation bar stay fixed at the top when scrolling</p>
+            </div>
+            <div class="task-demo">
+                <nav class="navbar">
+                    <span>Fixed Navigation Bar</span>
+                </nav>
+                <div class="scroll-area">
+                    <p>Scroll down to test the fixed navigation...</p>
+                    <div class="spacer"></div>
+                    <p>Keep scrolling to see the effect!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 4: Z-Index Stacking -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 4: Z-Index Stacking</h2>
+                <p>Use z-index to stack: Green on top, Red in middle, Blue on bottom</p>
+            </div>
+            <div class="task-demo">
+                <div class="stack-container">
+                    <div class="stack-box green-box">Green</div>
+                    <div class="stack-box red-box">Red</div>  
+                    <div class="stack-box blue-box">Blue</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 5: Modal Overlay -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 5: Modal Overlay</h2>
+                <p>Create a full-screen modal overlay using fixed positioning</p>
+            </div>
+            <div class="task-demo">
+                <button class="modal-btn" onclick="toggleModal()">Open Modal</button>
+                <div class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+                    <div class="modal-content">
+                        <h3>Modal Title</h3>
+                        <p>This modal should cover the entire viewport</p>
+                        <button onclick="toggleModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 6: Sticky Positioning -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 6: Sticky Header</h2>
+                <p>Make the sub-header stick to the top when scrolling within this card</p>
+            </div>
+            <div class="task-demo">
+                <div class="sticky-container">
+                    <div class="sticky-header">Sticky Sub-Header</div>
+                    <div class="content-area">
+                        <p>Content 1: Scroll within this area to see sticky behavior</p>
+                        <p>Content 2: The header should stick when it reaches the top</p>
+                        <p>Content 3: Keep scrolling to test the effect</p>
+                        <p>Content 4: More content to enable scrolling</p>
+                        <p>Content 5: Even more content for testing</p>
+                        <p>Content 6: Additional scrollable content</p>
+                        <p>Content 7: Last piece of content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 7: Badge Positioning -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 7: Notification Badge</h2>
+                <p>Position the red badge outside the top-right corner of the icon</p>
+            </div>
+            <div class="task-demo">
+                <div class="icon-wrapper">
+                    <div class="icon">👤</div>
+                    <span class="badge">3</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 8: Floating Action Button -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 8: Floating Action Button</h2>
+                <p>Position the FAB in the bottom-right corner of this demo container, 20px from the container edges, with a menu that appears above it on hover</p>
+            </div>
+            <div class="task-demo">
+                <div class="fab-demo">
+                    <div class="fab-container">
+                        <div class="fab-menu">
+                            <div class="fab-item">📧 Email</div>
+                            <div class="fab-item">📞 Call</div>
+                            <div class="fab-item">💬 Message</div>
+                        </div>
+                        <button class="fab-button">+</button>
+                    </div>
+                    <div class="demo-content">
+                        <p>Scroll and resize this demo area</p>
+                        <p>The FAB should always stay in the bottom-right corner</p>
+                        <p>Hover over the + button to see the menu</p>
+                        <div style="height: 300px; background: linear-gradient(45deg, #f0f9ff, #e0f2fe);"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 9: Multi-layer Tooltip -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 9: Multi-layer Tooltip</h2>
+                <p>Position the tooltip 10px below the button, centered, with an arrow pointing up to the button</p>
+            </div>
+            <div class="task-demo">
+                <div class="tooltip-demo">
+                    <div class="tooltip-wrapper">
+                        <button class="tooltip-btn">Hover for Tooltip</button>
+                        <div class="tooltip-box">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-content">
+                                <strong>Positioned Tooltip</strong><br>
+                                This tooltip appears below with an arrow!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 10: Complex Dropdown Menu -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 10: Multi-level Dropdown</h2>
+                <p>Create a complex dropdown menu with submenus that appear to the right. Each submenu should be properly positioned relative to its parent.</p>
+            </div>
+            <div class="task-demo">
+                <div class="dropdown-demo">
+                    <nav class="dropdown-nav">
+                        <div class="dropdown-item">
+                            <span class="dropdown-label">Products ▾</span>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-link">Web Design</div>
+                                <div class="dropdown-item has-submenu">
+                                    <span class="dropdown-label">Development ▶</span>
+                                    <div class="dropdown-submenu">
+                                        <div class="dropdown-link">Frontend</div>
+                                        <div class="dropdown-link">Backend</div>
+                                        <div class="dropdown-link">Full Stack</div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item has-submenu">
+                                    <span class="dropdown-label">Marketing ▶</span>
+                                    <div class="dropdown-submenu">
+                                        <div class="dropdown-link">SEO</div>
+                                        <div class="dropdown-link">Social Media</div>
+                                        <div class="dropdown-link">Email Marketing</div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-link">Consulting</div>
+                            </div>
+                        </div>
+                    </nav>
+                    <p style="margin-top: 2rem; color: #64748b; font-size: 0.9rem;">
+                        Hover over "Products" to see the dropdown, then hover over items with ▶ to see submenus
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 11: Page-level FAB -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 11: Page-level FAB</h2>
+                <p>Position a simple FAB in the bottom-right corner of the entire page (viewport), 20px from edges. This should stay fixed even when scrolling.</p>
+            </div>
+            <div class="task-demo">
+                <div class="page-fab-demo">
+                    <p>This task demonstrates viewport-level positioning.</p>
+                    <p>The orange FAB should appear in the bottom-right corner of your browser window, not just this demo box.</p>
+                    <p>Scroll the page to confirm it stays fixed to the viewport.</p>
+                    <div style="height: 200px; background: linear-gradient(45deg, #fef3c7, #fde68a); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #92400e; font-weight: 500;">
+                        Scroll to test the fixed positioning behavior
+                    </div>
+                </div>
+                <!-- FAB positioned relative to entire page -->
+                <button class="page-fab">★</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function toggleModal() {
+            const modal = document.querySelector('.modal-overlay');
+            const isHidden = modal.getAttribute('aria-hidden') === 'true';
+            modal.classList.toggle('active');
+            modal.setAttribute('aria-hidden', !isHidden);
+        }
+    </script>
+</body>

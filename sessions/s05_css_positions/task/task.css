@@ -1,0 +1,177 @@
+/* 
+CSS POSITIONING LAB
+Complete each task by adding CSS rules below.
+*/
+
+/* ============================================
+   TASK 1: RELATIVE POSITIONING
+   Goal: Move the middle box 20px down and 10px right
+   Hint: Use position: relative with top and left properties
+   ============================================ */
+
+.middle-box {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 2: ABSOLUTE POSITIONING  
+   Goal: Position the yellow circle in the bottom-right corner
+   Hint: Make parent relative, child absolute with bottom/right: 0
+   ============================================ */
+
+.parent-container {
+    /* Add your CSS here */
+}
+
+.circle {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 3: FIXED POSITIONING
+   Goal: Make the navbar stick to the top of the viewport
+   Hint: Use position: fixed with top: 0
+   ============================================ */
+
+.navbar {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 4: Z-INDEX STACKING
+   Goal: Stack order - Green (top), Red (middle), Blue (bottom)
+   Hint: Use z-index values like 30, 20, 10
+   ============================================ */
+
+.green-box {
+    /* Add your CSS here */
+}
+
+.red-box {
+    /* Add your CSS here */
+}  
+
+.blue-box {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 5: MODAL OVERLAY
+   Goal: Position modal to cover entire viewport
+   Hint: Fixed position with top: 0, left: 0, full width/height
+   ============================================ */
+
+.modal-overlay {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 6: STICKY POSITIONING
+   Goal: Make header stick to top when scrolling within container
+   Hint: Use position: sticky with top: 0
+   ============================================ */
+
+.sticky-header {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 7: BADGE POSITIONING
+   Goal: Position badge outside top-right corner of icon
+   Hint: Make wrapper relative, badge absolute with negative values
+   ============================================ */
+
+.icon-wrapper {
+    /* Add your CSS here */
+}
+
+.badge {
+    /* Add your CSS here */
+}
+
+/* ============================================
+   TASK 8: FLOATING ACTION BUTTON (HARD)
+   Goal: Position FAB in bottom-right corner of demo container, 20px from edges
+         Menu should appear above button on hover
+   Hint: Use absolute positioning for FAB (relative to demo container)
+         Position menu items with bottom: 100% and spacing
+   ============================================ */
+
+.fab-container {
+    /* Add your CSS here - position in bottom-right corner of container */
+    /* Hint: Use position: absolute with bottom: 20px, right: 20px */
+}
+
+.fab-menu {
+    /* Add your CSS here - position menu above button */
+    /* Hint: Use position: absolute with bottom: 100% */
+}
+
+.fab-item {
+    /* Add your CSS here - space menu items vertically */
+    /* Hint: Use margin-bottom for spacing between items */
+}
+
+/* ============================================
+   TASK 9: MULTI-LAYER TOOLTIP (HARD)
+   Goal: Position tooltip 10px below button, centered horizontally
+   Hint: Make wrapper relative, tooltip-box absolute
+         Use bottom: 100% and transform to center tooltip
+         Position arrow at bottom of tooltip box
+   ============================================ */
+
+.tooltip-wrapper {
+    /* Add your CSS here - create positioning context */
+}
+
+.tooltip-box {
+    /* Add your CSS here - position 10px below button, centered */
+    /* Hint: Use bottom: 100%, left: 50%, transform: translateX(-50%) */
+    /* Don't forget margin-bottom: 10px */
+}
+
+.tooltip-arrow {
+    /* Add your CSS here - position at top center of tooltip */
+    /* Hint: Use top: 0, left: 50%, transform: translateX(-50%) translateY(-100%) */
+}
+
+.tooltip-content {
+    /* Add your CSS here - ensure content appears properly */
+}
+
+/* ============================================
+   TASK 10: MULTI-LEVEL DROPDOWN (VERY HARD)
+   Goal: Position dropdown menu below button, submenus to the right
+   Hint: Use absolute positioning with top: 100% for main menu
+         Use left: 100% and top: -1px for submenus (slight overlap for better hover)
+         Make sure parent containers are positioned relative
+   ============================================ */
+
+.dropdown-item {
+    /* Add your CSS here - create positioning context */
+    /* Hint: Use position: relative */
+}
+
+.dropdown-menu {
+    /* Add your CSS here - position below the main button */
+    /* Hint: Use position: absolute with top: 100%, left: 0 */
+}
+
+.dropdown-submenu {
+    /* Add your CSS here - position to the right of parent menu item */
+    /* Hint: Use position: absolute with left: 100%, top: -1px */
+    /* Small negative margin-left helps with hover transition */
+}
+
+/* ============================================
+   TASK 11: PAGE-LEVEL FAB (HARD)
+   Goal: Position FAB in bottom-right corner of entire browser window
+         Should stay fixed when scrolling the page
+   Hint: Use fixed positioning relative to viewport
+         This is different from Task 8 which was relative to container
+   ============================================ */
+
+.page-fab {
+    /* Add your CSS here - position relative to viewport */
+    /* Hint: Use position: fixed with bottom: 20px, right: 20px */
+}
