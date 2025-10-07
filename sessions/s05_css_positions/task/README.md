@@ -37,6 +37,5 @@
 1. Open `index.html` in browser.
 2. Implement each task in order in `task.css`.
 3. Refresh to verify visually.
-4. (Optional) Peek at `solution.css` for learning—don’t copy blindly.
 
 Good luck! 🎯
