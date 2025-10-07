@@ -183,17 +183,17 @@ button:hover {
 
 /* Task 4: Z-Index Stacking */
 .stack-container {
-    position: relative;
     height: 200px;
     background: #f1f5f9;
     border-radius: 8px;
     border: 2px dashed #cbd5e1;
+    display: flex;
+    gap: 1rem;
 }
 
 .stack-box {
-    position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     color: white;
     display: flex;
     align-items: center;
@@ -338,6 +338,9 @@ button:hover {
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fab-button:hover {
@@ -400,6 +403,7 @@ button:hover {
     visibility: hidden;
     transition: all 0.3s ease;
     pointer-events: none;
+    z-index: 1
 }
 
 .tooltip-wrapper:hover .tooltip-box {
@@ -434,6 +438,60 @@ button:hover {
     border-radius: 8px;
 }
 
+/* Task 12: Human Figure Base (neutral styling before positioning) */
+.human-stage {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-height: 260px;
+    border: 2px dashed #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.human-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.human-wrapper > div {
+    background: rgba(59,130,246,0.3);
+}
+.human-head { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background: #fed7aa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15) inset;
+}
+.human-body {
+    width: 50px; 
+    height: 90px; 
+    background: #3b82f6; 
+    border-radius: 12px 12px 16px 16px;
+}
+.human-arm {
+    width: 16px; 
+    height: 70px; 
+    background: #3b82f6; 
+    border-radius: 12px;
+}
+.human-leg {
+    width: 20px; 
+    height: 80px; 
+    background: #1e3a8a; 
+    border-radius: 14px;
+}
+/* Tooltip arrow visual shape */
+.tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1f2937;
+}
+
 .dropdown-nav {
     display: inline-block;
 }
@@ -466,7 +524,7 @@ button:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     border: 1px solid #e2e8f0;
     min-width: 180px;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .dropdown-item:hover > .dropdown-menu,
@@ -552,6 +610,9 @@ button:hover {
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-fab:hover {

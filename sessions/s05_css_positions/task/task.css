@@ -43,16 +43,22 @@ Complete each task by adding CSS rules below.
    Hint: Use z-index values like 30, 20, 10
    ============================================ */
 
+.stack-container {
+  
+}
+.stack-box{
+
+}
 .green-box {
-    /* Add your CSS here */
+  
 }
 
 .red-box {
-    /* Add your CSS here */
+  
 }  
 
 .blue-box {
-    /* Add your CSS here */
+
 }
 
 /* ============================================
@@ -116,8 +122,8 @@ Complete each task by adding CSS rules below.
    TASK 9: MULTI-LAYER TOOLTIP (HARD)
    Goal: Position tooltip 10px below button, centered horizontally
    Hint: Make wrapper relative, tooltip-box absolute
-         Use bottom: 100% and transform to center tooltip
-         Position arrow at bottom of tooltip box
+         Use top: 100% plus margin-top: 10px and transform to center tooltip
+         Position arrow at top of tooltip box pointing upward to button
    ============================================ */
 
 .tooltip-wrapper {
@@ -126,13 +132,13 @@ Complete each task by adding CSS rules below.
 
 .tooltip-box {
     /* Add your CSS here - position 10px below button, centered */
-    /* Hint: Use bottom: 100%, left: 50%, transform: translateX(-50%) */
-    /* Don't forget margin-bottom: 10px */
+    /* Hint: Use top: 100%; left: 50%; transform: translateX(-50%); */
+    /* Don't forget margin-top: 10px */
 }
 
 .tooltip-arrow {
     /* Add your CSS here - position at top center of tooltip */
-    /* Hint: Use top: 0, left: 50%, transform: translateX(-50%) translateY(-100%) */
+    /* Hint: Use top: 0; left: 50%; transform: translateX(-50%) translateY(-100%); */
 }
 
 .tooltip-content {
@@ -174,4 +180,43 @@ Complete each task by adding CSS rules below.
 .page-fab {
     /* Add your CSS here - position relative to viewport */
     /* Hint: Use position: fixed with bottom: 20px, right: 20px */
+}
+
+/* ============================================
+   TASK 12: HUMAN FIGURE (BONUS)
+   Goal: Arrange provided divs into a simple human figure (head, body, arms, legs)
+   Hint: Make wrapper relative; absolutely position limbs; use transform rotate for arms/legs
+         Keep proportions consistent: head above body, arms at shoulder height, legs below
+   ============================================ */
+
+.human-stage {
+    /* Optional: center the figure or give background guidelines */
+}
+
+.human-wrapper {
+    /* Add your CSS here - create positioning context with position: relative */
+}
+
+.human-head {
+    /* Add your CSS here - circle positioned at top center */
+}
+
+.human-body {
+    /* Add your CSS here - vertical rectangle below head */
+}
+
+.human-arm.left-arm {
+    /* Add your CSS here - position & rotate left arm */
+}
+
+.human-arm.right-arm {
+    /* Add your CSS here - position & rotate right arm */
+}
+
+.human-leg.left-leg {
+    /* Add your CSS here - position & rotate left leg */
+}
+
+.human-leg.right-leg {
+    /* Add your CSS here - position & rotate right leg */
 }

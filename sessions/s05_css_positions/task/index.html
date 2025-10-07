@@ -20,7 +20,7 @@
         <section class="task-card">
             <div class="task-header">
                 <h2>Task 1: Relative Positioning</h2>
-                <p>Move the middle box 20px down and 10px right using relative positioning</p>
+                <p>Move the middle box 20px down and 10px right without affecting others</p>
             </div>
             <div class="task-demo">
                 <div class="box-container">
@@ -50,6 +50,7 @@
             <div class="task-header">
                 <h2>Task 3: Fixed Navigation</h2>  
                 <p>Make the navigation bar stay fixed at the top when scrolling</p>
+                <p style="font-size:0.8rem;color:#64748b;margin-top:0.5rem;">Hint: A fixed element is removed from the normal flow and will span the viewport, not just this card.</p>
             </div>
             <div class="task-demo">
                 <nav class="navbar">
@@ -67,13 +68,13 @@
         <section class="task-card">
             <div class="task-header">
                 <h2>Task 4: Z-Index Stacking</h2>
-                <p>Use z-index to stack: Green on top, Red in middle, Blue on bottom</p>
+                <p>Use z-index to stack: Green on top, Red in middle, Blue on bottom. Position them on top of each other.</p>
             </div>
             <div class="task-demo">
                 <div class="stack-container">
-                    <div class="stack-box green-box">Green</div>
-                    <div class="stack-box red-box">Red</div>  
-                    <div class="stack-box blue-box">Blue</div>
+                    <span class="stack-box green-box">Green</span>
+                    <span class="stack-box red-box">Red</span>  
+                    <span class="stack-box blue-box">Blue</span>
                 </div>
             </div>
         </section>
@@ -171,7 +172,6 @@
                         <div class="tooltip-box">
                             <div class="tooltip-arrow"></div>
                             <div class="tooltip-content">
-                                <strong>Positioned Tooltip</strong><br>
                                 This tooltip appears below with an arrow!
                             </div>
                         </div>
@@ -240,8 +240,29 @@
             </div>
         </section>
 
-    </div>
+        <!-- Task 12: Human Figure Composition -->
+        <section class="task-card">
+            <div class="task-header">
+                <h2>Task 12: Human Figure (Bonus)</h2>
+                <p>Using only the provided divs, position and assemble them to resemble a simple human figure (head, body, arms, legs). Do not change the HTML.</p>
+            </div>
+            <div class="task-demo">
+                <div class="human-stage">
+                    <div class="human-wrapper">
+                        <div class="human-head"></div>
+                        <div class="human-body"></div>
+                        <div class="human-arm left-arm"></div>
+                        <div class="human-arm right-arm"></div>
+                        <div class="human-leg left-leg"></div>
+                        <div class="human-leg right-leg"></div>
+                    </div>
+                </div>
+                <p style="font-size:0.8rem;color:#64748b;margin-top:1rem;">Goal: Demonstrate layered absolute positioning & transform usage. Hint: Make the wrapper relative; absolutely position limbs with rotation.</p>
+            </div>
+        </section>
 
+    </div>
+ 
     <script>
         function toggleModal() {
             const modal = document.querySelector('.modal-overlay');

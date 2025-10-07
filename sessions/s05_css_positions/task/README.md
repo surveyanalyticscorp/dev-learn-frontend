@@ -1,12 +1,12 @@
 # CSS Positioning Lab
 
-Learn CSS positioning through hands-on practice with 7 focused tasks covering `relative`, `absolute`, `fixed`, `sticky` positioning and `z-index` stacking.
+Learn CSS positioning through hands-on practice with 12 tasks covering `relative`, `absolute`, `fixed`, `sticky`, multi-layer stacking, advanced UI patterns (FABs, tooltips, multi-level dropdowns), and a bonus composition challenge.
 
 ## Getting Started
 
 1. **Work in `task.css`** - Add your solutions to the provided selectors
 2. **View in browser** - Open `index.html` to see your progress
-3. **Check solutions** - Uncomment `solution.css` link when ready to compare
+3. **Check solutions** - Uncomment the `<link rel="stylesheet" href="solution.css">` line in `index.html` (near the top) when you're ready to compare. Re-comment it to hide answers again.
 
 ## Tasks Overview
 
@@ -37,6 +37,26 @@ Learn CSS positioning through hands-on practice with 7 focused tasks covering `r
 ### Task 7: Badge Positioning
 **Goal:** Position the notification badge outside the top-right corner of the icon  
 **Key Concept:** Use relative parent + absolute child with negative positioning
+
+### Task 8: Floating Action Button (Container)
+**Goal:** Place a FAB in the bottom-right of its scrollable demo container (20px from edges) with a menu that appears above on hover  
+**Key Concept:** `position: absolute` inside a positioned container + stacking menu items vertically above using `bottom: 100%`
+
+### Task 9: Multi-layer Tooltip
+**Goal:** Show a tooltip 10px below the trigger button, centered horizontally, with an upward-pointing arrow  
+**Key Concept:** Parent relative; tooltip absolutely positioned with `top: 100%` and transform centering; arrow uses CSS borders
+
+### Task 10: Multi-level Dropdown
+**Goal:** Display a dropdown below its trigger; nested submenus appear to the right and stay visible while moving between levels  
+**Key Concept:** Layered absolute positioning (`top: 100%` for menus, `left: 100%` for submenus) + managing hover gaps
+
+### Task 11: Page-level FAB (Viewport)
+**Goal:** Fix a FAB to the bottom-right of the entire viewport, independent of page scroll  
+**Key Concept:** `position: fixed` vs. container-scoped absolute positioning
+
+### Task 12: Human Figure Composition (Bonus)
+**Goal:** Assemble divs into a stylized human figure (head, torso, arms, legs) without altering HTML  
+**Key Concept:** Relative parent + multiple absolutely positioned children using coordinates, transforms, and stacking for overlap
 
 ## Tips for Success
 
