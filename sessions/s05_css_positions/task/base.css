@@ -13,6 +13,42 @@ body {
     min-height: 200vh;
 }
 
+/* Reference Grid Styles */
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.reference-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reference-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.reference-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.reference-item p {
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: #1e293b;
+    font-size: 14px;
+}
+
 code {
     background: #e2e8f0;
     padding: 2px 6px;

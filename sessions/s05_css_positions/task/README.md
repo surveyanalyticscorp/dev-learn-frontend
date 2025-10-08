@@ -23,6 +23,63 @@
 
 ---
 
+## 🎯 Target Output
+
+Below are the reference images showing what your solution should look like:
+
+<div class="reference-grid">
+  <div class="reference-item">
+    <img src="../assets/01.webp" alt="Task 1: Relative Positioning">
+    <p>Task 1: Relative Positioning</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/02.webp" alt="Task 2: Absolute Positioning">
+    <p>Task 2: Absolute Positioning</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/03.webp" alt="Task 3: Fixed Positioning">
+    <p>Task 3: Fixed Positioning</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/04.webp" alt="Task 4: Z-Index Stacking">
+    <p>Task 4: Z-Index Stacking</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/05.webp" alt="Task 5: Modal Overlay">
+    <p>Task 5: Modal Overlay</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/06.webp" alt="Task 6: Sticky Positioning">
+    <p>Task 6: Sticky Positioning</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/07.webp" alt="Task 7: Badge Positioning">
+    <p>Task 7: Badge Positioning</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/08.webp" alt="Task 8: In-Container FAB">
+    <p>Task 8: In-Container FAB</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/09.webp" alt="Task 9: Tooltip">
+    <p>Task 9: Tooltip</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/10.webp" alt="Task 10: Dropdown Menu">
+    <p>Task 10: Dropdown Menu</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/11.webp" alt="Task 11: Page FAB">
+    <p>Task 11: Page FAB</p>
+  </div>
+  <div class="reference-item">
+    <img src="../assets/12.webp" alt="Task 12: Human Figure (Bonus)">
+    <p>Task 12: Human Figure (Bonus)</p>
+  </div>
+</div>
+
+---
+
 ## 🔧 Rules
 
 - Only edit: `task.css`.
