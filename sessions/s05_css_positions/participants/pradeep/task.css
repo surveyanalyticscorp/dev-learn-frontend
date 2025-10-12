@@ -1,0 +1,227 @@
+/* 
+CSS POSITIONING LAB
+Complete each task by adding CSS rules below.
+*/
+
+/* ============================================
+   TASK 1: RELATIVE POSITIONING
+   Goal: Move the middle box 20px down and 10px right
+   ============================================ */
+
+.middle-box {
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+
+/* ============================================
+   TASK 2: ABSOLUTE POSITIONING  
+   Goal: Position the yellow circle in the bottom-right corner
+   ============================================ */
+
+.parent-container {
+  position: relative;
+}
+.circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ============================================
+   TASK 3: FIXED POSITIONING
+   Goal: Make the navbar stick to the top of the viewport
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+/* ============================================
+   TASK 4: Z-INDEX STACKING
+   Goal: Stack order - Green (top), Red (middle), Blue (bottom)
+   ============================================ */
+
+.stack-container {
+  position: relative;
+}
+.stack-box {
+  position: absolute;
+}
+.green-box {
+  z-index: 3;
+}
+
+.red-box {
+  z-index: 2;
+}
+
+.blue-box {
+  z-index: 1;
+}
+
+/* ============================================
+   TASK 5: MODAL OVERLAY
+   Goal: Position modal to cover entire viewport
+   ============================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+/* ============================================
+   TASK 6: STICKY POSITIONING
+   Goal: Make header stick to top when scrolling within container
+   ============================================ */
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+
+/* ============================================
+   TASK 7: BADGE POSITIONING
+   Goal: Position badge outside top-right corner of icon
+   ============================================ */
+
+.icon-wrapper {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* ============================================
+   TASK 8: FLOATING ACTION BUTTON (HARD)
+   Goal: Position FAB in bottom-right corner of demo container, 20px from edges
+         Menu should appear above button on hover
+   ============================================ */
+
+.fab-container {
+}
+
+.fab-menu {
+  margin-bottom: 12px;
+}
+
+.fab-item {
+  margin-bottom: 8px;
+}
+
+/* ============================================
+   TASK 9: MULTI-LAYER TOOLTIP (HARD)
+   Goal: Position tooltip 10px below button, centered horizontally
+   ============================================ */
+
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.tooltip-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+/* ============================================
+   TASK 10: MULTI-LEVEL DROPDOWN (VERY HARD)
+   Goal: Position dropdown menu below button, submenus to the right
+   ============================================ */
+
+.dropdown-item {
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+/* ============================================
+   TASK 11: PAGE-LEVEL FAB (HARD)
+   Goal: Position FAB in bottom-right corner of entire browser window
+         Should stay fixed when scrolling the page
+   ============================================ */
+
+.page-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* ============================================
+   TASK 12: HUMAN FIGURE (BONUS)
+   Goal: Arrange provided divs into a simple human figure (head, body, arms, legs)
+         Keep proportions consistent: head above body, arms at shoulder height, legs below
+   ============================================ */
+
+.human-wrapper {
+  position: relative;
+  width: 120px;
+  height: 200px;
+}
+
+.human-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.human-body {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.human-arm {
+  position: absolute;
+  top: 70px;
+}
+
+.human-arm.left-arm {
+  left: 0;
+  transform: rotate(20deg);
+}
+
+.human-arm.right-arm {
+  right: 0;
+  transform: rotate(-20deg);
+}
+
+.human-leg {
+  position: absolute;
+  top: 150px;
+}
+
+.human-leg.left-leg {
+  left: 20px;
+  transform: rotate(5deg);
+}
+
+.human-leg.right-leg {
+  right: 20px;
+  transform: rotate(-5deg);
+}
