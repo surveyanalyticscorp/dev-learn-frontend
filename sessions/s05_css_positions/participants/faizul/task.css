@@ -20,8 +20,12 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .parent-container {
+  position: relative;
 }
 .circle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 /* ============================================
