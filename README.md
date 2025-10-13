@@ -23,8 +23,8 @@
 ### Layouts & Positioning
 
 - Box Model: padding, margin, border
-- Position: Relative, absolute, sticky, fixed
-- Flexbox & Grid
+- [Position: Relative, absolute, sticky, fixed](/sessions/s05_css_positions)
+- [Flexbox](/sessions/s06_css_layouts) & Grid
 
 ### Visual Layers & Design
 
