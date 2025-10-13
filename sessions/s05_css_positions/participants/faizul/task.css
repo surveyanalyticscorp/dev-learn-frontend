@@ -49,14 +49,24 @@ Complete each task by adding CSS rules below.
 .stack-container {
 }
 .stack-box {
+  position: relative;
 }
 .green-box {
+  top: 20px;
+  left: 20px;
+  z-index: 1003;
 }
 
 .red-box {
+  top: 60px;
+  left: -40px;
+  z-index: 1002;
 }
 
 .blue-box {
+  top: 100px;
+  left: -80px;
+  z-index: 1000;
 }
 
 /* ============================================
