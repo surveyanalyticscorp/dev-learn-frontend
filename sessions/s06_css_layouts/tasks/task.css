@@ -1,4 +1,17 @@
 /* ==============================
+   FLEXBOX EXERCISES
+   
+   INSTRUCTIONS:
+   1. Fill in your CSS code in each task section
+   2. Use only Flexbox properties to solve these challenges
+   3. Use the browser's developer tools to inspect your work
+   4. Once you're finished with all tasks, uncomment the solution.css
+      link in index.html to see the reference solutions
+   5. Try to achieve the same results on your own before looking
+      at the solutions
+============================== */
+
+/* ==============================
    TASK 1: Center the Box
    - Use Flexbox on .box-container
    - Center the .box both vertically and horizontally
@@ -23,6 +36,7 @@
 
 .nav-links {
   /* your code here */
+  list-style: none; /* Remove default list bullets */
 }
 
 
@@ -57,30 +71,43 @@
    - Use flex to position .sidebar and .content side by side
    - Inside .content, stack .header, .main-area, and .footer vertically
    - Make sidebar fixed width and content flexible
+   - Make the footer stick to the bottom of the content area
+   - Make the main-area expand to fill available space
    - Add a responsive rule: on small screens, stack sidebar on top
 ============================== */
 .dashboard {
   /* your code here */
+  min-height: 400px; /* Ensure sufficient height for the layout */
 }
 
 .sidebar {
   /* your code here */
+  background: #e0f2fe; /* Light blue background for visibility */
+  padding: 1rem;
 }
 
 .content {
   /* your code here */
+  min-height: 380px; /* Make content take most of dashboard height */
 }
 
 .header {
-  /* optional */
+  /* optional styling */
+  background: #e2e8f0;
+  padding: 1rem;
 }
 
 .main-area {
-  /* optional */
+  /* optional styling */
+  background: #e2e8f0;
+  padding: 1rem;
+  min-height: 200px; /* Give main area some height */
 }
 
 .footer {
-  /* optional */
+  /* optional styling */
+  background: #e2e8f0;
+  padding: 1rem;
 }
 
 @media (max-width: 700px) {
@@ -101,15 +128,19 @@
    - Use Flexbox only (no grid!)
    - Make .masonry display as flex and wrap its children
    - Each .brick should behave like a fixed-width column
+   - Use flex-flow: column wrap to create a vertical flow that wraps to new columns
+   - Set a fixed height on the container to force wrapping
    - Try to make it look like a staggered masonry layout
    - BONUS: make it responsive (more columns on wide screens)
 ============================== */
 .masonry {
   /* your code here */
+  height: 700px; /* Fixed height container helps with masonry effect */
 }
 
 .brick {
   /* your code here */
+  margin-bottom: 1rem; /* Provide default spacing if flex gap isn't used */
 }
 
 @media (max-width: 1000px) {
