@@ -1,0 +1,629 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+  min-height: 200vh;
+}
+
+code {
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+/* Main Layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Task Cards */
+.task-card {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.task-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.task-header h2 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.task-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.task-demo {
+  padding: 2rem;
+}
+
+/* Common Button Styles */
+button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* Task 1: Relative Positioning */
+.box-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 2rem;
+  background: #f1f5f9;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background: #64748b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.middle-box {
+  background: #3b82f6;
+}
+
+/* Task 2: Absolute Positioning */
+.parent-container {
+  width: 100%;
+  height: 200px;
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #fbbf24;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #92400e;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Task 3: Fixed Navigation */
+.navbar {
+  background: #1e293b;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.scroll-area {
+  height: 300px;
+  overflow-y: auto;
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.spacer {
+  height: 200px;
+  background: linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+/* Task 4: Z-Index Stacking */
+.stack-container {
+  height: 200px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+  display: flex;
+  gap: 1rem;
+}
+
+.stack-box {
+  width: 80px;
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.green-box {
+  background: #10b981;
+  top: 20px;
+  left: 20px;
+}
+
+.red-box {
+  background: #ef4444;
+  top: 60px;
+  left: 60px;
+}
+
+.blue-box {
+  background: #3b82f6;
+  top: 100px;
+  left: 100px;
+}
+
+/* Task 5: Modal Overlay */
+.modal-btn {
+  margin-bottom: 1rem;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* Task 6: Sticky Positioning */
+.sticky-container {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.sticky-header {
+  background: #10b981;
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content-area {
+  padding: 1rem;
+}
+
+.content-area p {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 4px;
+  border-left: 3px solid #e2e8f0;
+}
+
+/* Task 7: Badge Positioning */
+.icon-wrapper {
+  display: inline-block;
+  padding: 2rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #3b82f6;
+  display: block;
+}
+
+.badge {
+  background: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Task 8: Floating Action Button */
+.fab-demo {
+  position: relative;
+  height: 400px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  overflow: auto;
+}
+
+.demo-content {
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+.fab-button {
+  width: 56px;
+  height: 56px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab-button:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+.fab-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.fab-container:hover .fab-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fab-item {
+  background: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 28px;
+  font-size: 0.85rem;
+  color: #374151;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.fab-item:hover {
+  background: #f3f4f6;
+  transform: translateX(-4px);
+}
+
+/* Task 9: Multi-layer Tooltip */
+.tooltip-demo {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tooltip-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tooltip-btn:hover {
+  background: #2563eb;
+}
+
+.tooltip-box {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tooltip-wrapper:hover .tooltip-box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1f2937;
+}
+
+.tooltip-content {
+  background: #1f2937;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Task 10: Multi-level Dropdown */
+.dropdown-demo {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+/* Task 12: Human Figure Base (neutral styling before positioning) */
+.human-stage {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 260px;
+  border: 2px dashed #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.human-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.human-wrapper > div {
+  background: rgba(59, 130, 246, 0.3);
+}
+.human-head {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fed7aa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset;
+}
+.human-body {
+  width: 50px;
+  height: 90px;
+  background: #3b82f6;
+  border-radius: 12px 12px 16px 16px;
+}
+.human-arm {
+  width: 16px;
+  height: 70px;
+  background: #3b82f6;
+  border-radius: 12px;
+}
+.human-leg {
+  width: 20px;
+  height: 80px;
+  background: #1e3a8a;
+  border-radius: 14px;
+}
+/* Tooltip arrow visual shape */
+.tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1f2937;
+}
+
+.dropdown-nav {
+  display: inline-block;
+}
+
+.dropdown-label {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-label:hover {
+  background: #2563eb;
+}
+
+.dropdown-menu,
+.dropdown-submenu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition-delay: 0.1s;
+  pointer-events: none;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  min-width: 180px;
+  z-index: 1;
+}
+
+.dropdown-item:hover > .dropdown-menu,
+.dropdown-item:hover > .dropdown-submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.dropdown-menu:hover,
+.dropdown-submenu:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+/* Keep submenu visible when hovering from parent to submenu */
+.has-submenu:hover > .dropdown-submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.dropdown-link {
+  padding: 0.75rem 1.25rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+  display: block;
+}
+
+.dropdown-link:hover {
+  background: #f8fafc;
+}
+
+.dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > .dropdown-label {
+  background: #6b7280;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.has-submenu:last-child > .dropdown-label {
+  border-bottom: none;
+}
+
+.has-submenu > .dropdown-label:hover {
+  background: #4b5563;
+}
+
+/* Task 11: Page-level FAB */
+.page-fab-demo {
+  padding: 1.5rem;
+  background: #fefbf3;
+  border-radius: 8px;
+  border: 2px solid #fed7aa;
+  line-height: 1.6;
+}
+
+.page-fab {
+  width: 56px;
+  height: 56px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-fab:hover {
+  background: #ea580c;
+  transform: scale(1.1);
+}
+
+.scroll-content p {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 4px;
+  border-left: 3px solid #3b82f6;
+}
