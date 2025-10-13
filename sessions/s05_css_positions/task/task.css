@@ -38,7 +38,7 @@ Complete each task by adding CSS rules below.
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 11;
 }
 
 /* ============================================
@@ -75,7 +75,7 @@ Complete each task by adding CSS rules below.
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
 /* ============================================
@@ -86,7 +86,7 @@ Complete each task by adding CSS rules below.
 .sticky-header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 2;
 }
 
 /* ============================================
@@ -185,7 +185,7 @@ Complete each task by adding CSS rules below.
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 /* ============================================
