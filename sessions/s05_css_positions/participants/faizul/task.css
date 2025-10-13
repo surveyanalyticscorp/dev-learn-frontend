@@ -89,6 +89,8 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .sticky-header {
+  position: sticky;
+  top: 0;
 }
 
 /* ============================================
