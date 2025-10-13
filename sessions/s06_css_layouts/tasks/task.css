@@ -1,0 +1,125 @@
+/* ==============================
+   TASK 1: Center the Box
+   - Use Flexbox on .box-container
+   - Center the .box both vertically and horizontally
+============================== */
+.box-container {
+  height: 200px;
+  /* your code here */
+}
+
+
+
+/* ==============================
+   TASK 2: Navigation Bar
+   - Use flex on .navbar
+   - Space between logo and links
+   - Align items vertically center
+   - Make .nav-links horizontal with gaps
+============================== */
+.navbar {
+  /* your code here */
+}
+
+.nav-links {
+  /* your code here */
+}
+
+
+
+/* ==============================
+   TASK 3: Equal Height Cards
+   - Use flex on .card-row
+   - Make all cards equal height
+   - Add some space between cards
+============================== */
+.card-row {
+  /* your code here */
+}
+
+
+
+/* ==============================
+   TASK 4: Photo Gallery
+   - Display photos in a flexible grid
+   - Wrap items if needed
+   - Add gaps between photos
+   - Center the whole gallery
+============================== */
+.gallery {
+  /* your code here */
+}
+
+
+
+/* ==============================
+   TASK 5: Responsive Dashboard
+   - Use flex to position .sidebar and .content side by side
+   - Inside .content, stack .header, .main-area, and .footer vertically
+   - Make sidebar fixed width and content flexible
+   - Add a responsive rule: on small screens, stack sidebar on top
+============================== */
+.dashboard {
+  /* your code here */
+}
+
+.sidebar {
+  /* your code here */
+}
+
+.content {
+  /* your code here */
+}
+
+.header {
+  /* optional */
+}
+
+.main-area {
+  /* optional */
+}
+
+.footer {
+  /* optional */
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    /* responsive layout */
+  }
+
+  .sidebar {
+    width: 100%;
+    /* responsive layout */
+  }
+}
+
+
+
+/* ==============================
+   TASK 6: Masonry Layout Illusion
+   - Use Flexbox only (no grid!)
+   - Make .masonry display as flex and wrap its children
+   - Each .brick should behave like a fixed-width column
+   - Try to make it look like a staggered masonry layout
+   - BONUS: make it responsive (more columns on wide screens)
+============================== */
+.masonry {
+  /* your code here */
+}
+
+.brick {
+  /* your code here */
+}
+
+@media (max-width: 1000px) {
+  .brick {
+    /* responsive layout */
+  }
+}
+
+@media (max-width: 600px) {
+  .brick {
+    /* responsive layout */
+  }
+}
