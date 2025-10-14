@@ -9,9 +9,6 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .middle-box {
-  position: relative;
-  top: 20px;
-  left: 10px;
 }
 
 /* ============================================
@@ -20,12 +17,8 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .parent-container {
-  position: relative;
 }
 .circle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 /* ============================================
@@ -34,11 +27,6 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
 }
 
 /* ============================================
@@ -47,21 +35,16 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .stack-container {
-  position: relative;
 }
 .stack-box {
-  position: absolute;
 }
 .green-box {
-  z-index: 3;
 }
 
 .red-box {
-  z-index: 2;
 }
 
 .blue-box {
-  z-index: 1;
 }
 
 /* ============================================
@@ -70,12 +53,6 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
 }
 
 /* ============================================
@@ -84,9 +61,6 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 /* ============================================
@@ -95,13 +69,9 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .icon-wrapper {
-  position: relative;
 }
 
 .badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
 }
 
 /* ============================================
@@ -111,20 +81,12 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .fab-container {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 .fab-menu {
-  margin-bottom: 12px;
 }
 
 .fab-item {
-  margin-bottom: 8px;
 }
 
 /* ============================================
@@ -133,23 +95,12 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .tooltip-wrapper {
-  position: relative;
-  display: inline-block;
 }
 
 .tooltip-box {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
 }
 
 .tooltip-arrow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-100%);
 }
 
 /* ============================================
@@ -158,21 +109,12 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .dropdown-item {
-  position: relative;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 2px;
 }
 
 .dropdown-submenu {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: 4px;
 }
 
 /* ============================================
@@ -182,10 +124,6 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .page-fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
 }
 
 /* ============================================
@@ -195,53 +133,28 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .human-wrapper {
-  position: relative;
-  height: 200px;
-  width: 120px;
 }
 
 .human-head {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .human-body {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .human-arm {
-  position: absolute;
-  top: 60px;
-  transform-origin: top center;
 }
 
 .human-arm.left-arm {
-  left: 15px;
-  transform: rotate(20deg);
 }
 
 .human-arm.right-arm {
-  right: 15px;
-  transform: rotate(-20deg);
 }
 
 .human-leg {
-  position: absolute;
-  top: 130px;
-  transform-origin: top center;
 }
 
 .human-leg.left-leg {
-  left: 35px;
-  transform: rotate(5deg);
 }
 
 .human-leg.right-leg {
-  right: 35px;
-  transform: rotate(-5deg);
 }
