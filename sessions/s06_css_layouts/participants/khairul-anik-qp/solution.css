@@ -201,6 +201,9 @@
 ============================== */
 .holy-grail {
   /* your code here */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   min-height: 500px;
   /* Give the container some height */
 }
@@ -208,17 +211,30 @@
 .hg-header,
 .hg-footer {
   /* your code here */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   background-color: #e2e8f0;
   padding: 1rem;
 }
 
 .hg-body {
   /* your code here - this is the container for the three columns */
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hg-body {
+    flex-direction: column;
+  }
 }
 
 .hg-nav,
 .hg-aside {
   /* your code here - these are the sidebars */
+  flex: 0 1 300px;
   background-color: #e0f2fe;
   padding: 1rem;
 }
@@ -227,6 +243,7 @@
   /* your code here - this is the main content area */
   background-color: #f1f5f9;
   padding: 1rem;
+  flex-grow: 1;
 }
 
 .article {
