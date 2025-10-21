@@ -65,4 +65,3 @@ The Holy Grail layout is particularly challenging and demonstrates real-world ap
 5. Test your solutions at different screen sizes.
 
 Happy coding!
-
