@@ -1,0 +1,46 @@
+.hobby-list {
+  font-family: sans-serif;
+  list-style-type: square;
+  color: #ff6600;
+  width: max-content;
+  line-height: 1.4;
+}
+
+.hobby-list:has(li:hover) li:not(:hover) {
+  opacity: 0.3;
+}
+
+.hobby-list li {
+  transition: all 0.2s ease-in-out;
+}
+
+.hobby-list li:hover {
+  opacity: 1;
+  color: red;
+  transform: scale(1.2, 1.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.hobby-list:has(li:hover) li:has(+ li:hover) {
+  opacity: 1;
+  color: green;
+  transform: scale(1.1, 1.2);
+}
+
+.hobby-list:has(li:hover) li:has(+ li + li:hover) {
+  opacity: 0.5;
+  color: green;
+  transform: scale(1.02, 1.2);
+}
+
+.hobby-list:has(li:hover) li:hover + li {
+  opacity: 1;
+  color: blue;
+  transform: scale(1.1, 1.2);
+}
+
+.hobby-list:has(li:hover) li:hover + li + li {
+  opacity: 0.5;
+  color: blue;
+  transform: scale(1.02, 1.2);
+}
