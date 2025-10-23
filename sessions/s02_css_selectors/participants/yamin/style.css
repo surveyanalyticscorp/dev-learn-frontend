@@ -1,0 +1,67 @@
+/* === CSS Selectors Workshop Starter === */
+
+/* Task 1 */
+#task-1 a[target="_blank"]::after {
+    content: "🌞";
+    font-size: 3rem;
+    margin-right: 0.5rem;
+}
+
+/* Task 2 */
+label:has(+ input[required])::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+
+/* Task 3 */
+.zebra-list li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+/* Task 4 */
+#task-4 h2 + p {
+    background-color: yellow;
+    color: red;
+}
+/* Task 5 */
+#task-5 .box:first-of-type,
+#task-5 .box:last-child {
+    border: 2px solid blue;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5);
+}
+
+/* Task 6 */
+.form-field input:invalid {
+    border: 2px solid red;
+}
+
+.form-field input:valid {
+    border: 2px solid green;
+}
+
+/* Task 7 */
+#task-7 .card:has(img) button:nth-of-type(2) {
+    background-color: red;
+    color: white;
+}
+/* Task 8 */
+ul.menu > li {
+    background-color: lightgray;
+    margin: 5px 0;
+}
+
+ul.menu li ul li:hover {
+    background-color: white;
+}
+/* Task 9 */
+.steps {
+  counter-reset: step-counter;
+  list-style-type: none;
+}
+
+.step::before {
+  counter-increment: step-counter;
+  content: counter(step-counter) ". ";
+  font-weight: bold;
+}
