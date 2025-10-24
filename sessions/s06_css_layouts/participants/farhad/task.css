@@ -1,0 +1,281 @@
+/* ==============================
+   FLEXBOX LAYOUT CHALLENGES
+   
+   INSTRUCTIONS:
+   1. Complete each task by writing CSS in the marked sections
+   2. Use ONLY flexbox properties to solve these challenges (no grid or absolute positioning)
+   3. Use your browser's developer tools to inspect elements as you work
+   4. Test your layouts at different screen sizes to ensure responsiveness
+   5. Once you've completed all tasks, uncomment the solution.css link in index.html
+      to compare your solutions with the reference implementation
+   6. Try to achieve the same visual results before looking at the solutions
+   
+   AVAILABLE FLEXBOX PROPERTIES:
+   - display: flex | inline-flex
+   - flex-direction: row | column | row-reverse | column-reverse
+   - justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+   - align-items: flex-start | flex-end | center | baseline | stretch
+   - align-content: flex-start | flex-end | center | space-between | space-around | stretch
+   - flex-wrap: nowrap | wrap | wrap-reverse
+   - flex-flow: <flex-direction> <flex-wrap>
+   - align-self: auto | flex-start | flex-end | center | baseline | stretch
+   - flex: <flex-grow> <flex-shrink> <flex-basis> | auto | initial | none
+   - gap: <row-gap> <column-gap>
+============================== */
+
+/* ==============================
+   TASK 1: Center the Box
+   - Use Flexbox on .box-container
+   - Center the .box both vertically and horizontally
+============================== */
+.box-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* your code here */
+}
+
+/* ==============================
+   TASK 2: Navigation Bar
+   - Use flex on .navbar
+   - Space between logo and links
+   - Align items vertically center
+   - Make .nav-links horizontal with gaps
+============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* your code here */
+}
+
+.nav-links {
+  /* your code here */
+  display: flex;
+  gap: 1rem;
+  list-style: none; /* Remove default list bullets */
+}
+
+/* ==============================
+   TASK 3: Equal Height Cards
+   - Use flex on .card-row
+   - Make all cards equal height
+   - Add some space between cards
+============================== */
+.card-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+}
+
+/* ==============================
+   TASK 4: Photo Gallery
+   - Display photos in a flexible grid
+   - Wrap items if needed
+   - Add gaps between photos
+   - Center the whole gallery
+============================== */
+.gallery {
+  /* your code here */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==============================
+   TASK 5: Responsive Dashboard
+   - Use flex to position .sidebar and .content side by side
+   - Inside .content, stack .header, .main-area, and .footer vertically
+   - Make sidebar fixed width and content flexible
+   - Make the footer stick to the bottom of the content area
+   - Make the main-area expand to fill available space
+   - Add a responsive rule: on small screens, stack sidebar on top
+============================== */
+.dashboard {
+  display: flex;
+  min-height: 400px;
+  gap: 10px;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: #e0f2fe;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 380px;
+  gap: 10px;
+  background: #a9c7e5;
+  padding: 10px;
+}
+
+.header {
+  /* optional styling */
+  background: #e2e8f0;
+  padding: 1rem;
+}
+
+.main-area {
+  flex: 1;
+  background: #e2e8f0;
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.footer {
+  background: #e2e8f0;
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: -1;
+  }
+}
+
+/* ==============================
+   TASK 6: Holy Grail Layout with Dynamic Content
+   
+   THE CHALLENGE:
+   Create a classic "Holy Grail" layout with header, footer, main content, and two sidebars
+   that works responsively across different screen sizes.
+   
+   REQUIREMENTS:
+   1. Header: 
+      - Position the title on left and icon on right using flexbox
+      - Make the header title update in real-time from the textarea input
+   
+   2. Three-column Layout:
+      - Arrange nav (left sidebar), main content, and aside (right sidebar) in a row
+      - Make main content expand to fill available space
+      - On mobile (<768px), stack the columns vertically in order: nav, main, aside
+   
+   3. Content Management:
+      - Make main content scrollable when its content exceeds the container height
+      - Center content horizontally within the main area when there's extra space
+      - Handle dynamic content added through the buttons without breaking layout
+   
+   4. Styling:
+      - Ensure proper spacing between all elements
+      - Apply appropriate padding and margin for readability
+      - BONUS: Style the scrollbar for the main content area
+
+   HINTS:
+   - The main section will need both overflow control and flexbox alignment
+   - Remember to use flex-direction to handle the responsive column stacking
+   - You may need nested flex containers to achieve all requirements
+============================== */
+.holy-grail {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.hg-header,
+.hg-footer {
+  background-color: #e2e8f0;
+  padding: 1rem;
+}
+
+.hg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hg-body {
+  display: flex;
+  flex: 1;
+  gap: 0;
+}
+
+.hg-nav,
+.hg-aside {
+  width: 200px;
+  flex-shrink: 0;
+  background-color: #e0f2fe;
+  padding: 1rem;
+}
+
+.hg-main {
+  flex: 1;
+  background-color: #f1f5f9;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Styling for main content children */
+.hg-main > * {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hg-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hg-main::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.hg-main::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.hg-main::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.article {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .hg-body {
+    flex-direction: column;
+  }
+
+  .hg-nav,
+  .hg-aside {
+    width: 100%;
+    order: 0;
+  }
+
+  .hg-nav {
+    order: 1;
+  }
+
+  .hg-main {
+    order: 2;
+  }
+
+  .hg-aside {
+    order: 3;
+  }
+}
