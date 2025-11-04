@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Tasks</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="task.css" />
+  </head>
+  <body>
+    <h1>🎯 Flexbox Practice Tasks</h1>
+
+    <!-- Task 1 -->
+    <section class="task task-1">
+      <h2>Task 1 – Center the Box</h2>
+      <div class="box-container">
+        <div class="box">A</div>
+      </div>
+    </section>
+
+    <!-- Task 2 -->
+    <section class="task task-2">
+      <h2>Task 2 – Create a Navigation Bar</h2>
+      <nav class="navbar">
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Task 3 -->
+    <section class="task task-3">
+      <h2>Task 3 – Equal Height Cards</h2>
+      <div class="card-row">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2 with more text</div>
+        <div class="card">Card 3</div>
+      </div>
+    </section>
+
+    <!-- Task 4 -->
+    <section class="task task-4">
+      <h2>Task 4 – Photo Gallery (Wrap & Gap)</h2>
+      <div class="gallery">
+        <div class="photo">1</div>
+        <div class="photo">2</div>
+        <div class="photo">3</div>
+        <div class="photo">4</div>
+        <div class="photo">5</div>
+        <div class="photo">6</div>
+        <div class="photo">7</div>
+        <div class="photo">8</div>
+        <div class="photo">9</div>
+      </div>
+    </section>
+
+    <!-- Task 5 -->
+    <section class="task task-5">
+      <h2>Task 5 – Responsive Dashboard Layout</h2>
+      <div class="dashboard">
+        <aside class="sidebar">Sidebar</aside>
+        <main class="content">
+          <header class="header">Header</header>
+          <section class="main-area">Main Content</section>
+          <footer class="footer">Footer</footer>
+        </main>
+      </div>
+    </section>
+
+    <!-- Task 6 -->
+    <section class="task task-6 full-width">
+      <h2>Task 6 – Holy Grail Layout with Dynamic Content</h2>
+      <div class="holy-grail">
+        <header class="hg-header">
+          <div class="header-title">Dashboard</div>
+          <div class="header-icon">
+            John Doe
+          </div>
+        </header>
+        <div class="hg-body">
+          <nav class="hg-nav">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+            <button id="add-nav-item" class="btn">Add Navigation Item</button>
+          </nav>
+          <main class="hg-main">
+            <h3>Main Content</h3>
+            <textarea id="header-title-input" placeholder="Type to update header title..." rows="3"></textarea>
+            <div class="article">
+              <h4>Article 1</h4>
+              <p>This is a long paragraph of text that should wrap naturally. The main content area needs to expand to take up available space.</p>
+            </div>
+            <div class="article">
+              <h4>Article 2</h4>
+              <p>Another paragraph with different length content. The main content should be centered.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <button id="add-content" class="btn primary">Add More Content</button>
+          </main>
+          <aside class="hg-aside">
+            <h3>Sidebar</h3>
+            <div class="widget">Widget 1</div>
+            <div class="widget">Widget 2</div>
+            <button id="add-widget" class="btn">Add Widget</button>
+          </aside>
+        </div>
+        <footer class="hg-footer">Footer</footer>
+      </div>
+    </section>
+    <!-- JavaScript for dynamic content -->
+    <script>
+      // Wait for DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add navigation item button
+        const addNavItemBtn = document.getElementById('add-nav-item');
+        if (addNavItemBtn) {
+          let navCount = 4;
+          addNavItemBtn.addEventListener('click', function() {
+            navCount++;
+            const navList = document.querySelector('.hg-nav ul');
+            const newItem = document.createElement('li');
+            newItem.innerHTML = `<a href="#">Link ${navCount}</a>`;
+            navList.appendChild(newItem);
+          });
+        }
+        
+        // Add content button
+        const addContentBtn = document.getElementById('add-content');
+        if (addContentBtn) {
+          let articleCount = 2;
+          addContentBtn.addEventListener('click', function() {
+            articleCount++;
+            const mainContent = document.querySelector('.hg-main');
+            const newArticle = document.createElement('div');
+            newArticle.className = 'article';
+            
+            // Create more paragraphs for better scrolling demonstration
+            const randomParagraphs = Math.floor(Math.random() * 4) + 2; // 2-5 paragraphs
+            let paragraphs = '';
+            
+            for (let i = 0; i < randomParagraphs; i++) {
+              const length = Math.floor(Math.random() * 3);
+              let text;
+              
+              switch (length) {
+                case 0:
+                  text = 'Short paragraph of text. This demonstrates how the layout handles content with different heights.';
+                  break;
+                case 1:
+                  text = 'Medium length paragraph with some more words to demonstrate how the layout handles different content lengths. The scrolling should be smooth and the content should remain centered horizontally.';
+                  break;
+                case 2:
+                  text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.';
+                  break;
+              }
+              
+              paragraphs += `<p>${text}</p>`;
+            }
+            
+            newArticle.innerHTML = `
+              <h4>Article ${articleCount}</h4>
+              ${paragraphs}
+            `;
+            
+            // Insert before the button
+            mainContent.insertBefore(newArticle, addContentBtn);
+          });
+        }
+        
+        // Add widget button
+        const addWidgetBtn = document.getElementById('add-widget');
+        if (addWidgetBtn) {
+          let widgetCount = 2;
+          addWidgetBtn.addEventListener('click', function() {
+            widgetCount++;
+            const sidebar = document.querySelector('.hg-aside');
+            const newWidget = document.createElement('div');
+            newWidget.className = 'widget';
+            newWidget.textContent = `Widget ${widgetCount}`;
+            
+            // Insert before the button
+            sidebar.insertBefore(newWidget, addWidgetBtn);
+          });
+        }
+
+        // Header title update from textarea
+        const headerTitleInput = document.getElementById('header-title-input');
+        const headerTitle = document.querySelector('.header-title');
+        
+        if (headerTitleInput && headerTitle) {
+          // Set initial value of textarea to match current header title
+          headerTitleInput.value = headerTitle.textContent;
+          
+          // Update header title as user types
+          headerTitleInput.addEventListener('input', function() {
+            const newTitle = headerTitleInput.value.trim() || 'Dashboard'; // Default to "Dashboard" if empty
+            headerTitle.textContent = newTitle;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
