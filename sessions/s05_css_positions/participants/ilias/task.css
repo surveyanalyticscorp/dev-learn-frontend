@@ -9,8 +9,8 @@ Complete each task by adding CSS rules below.
    ============================================ */
 .middle-box {
   position: relative;
-  bottom: 20px;
-  right: 10px;
+  top: 20px;
+  left: 10px;
 }
 
 /* ============================================
@@ -111,7 +111,6 @@ Complete each task by adding CSS rules below.
    Goal: Position FAB in bottom-right corner of demo container, 20px from edges
          Menu should appear above button on hover
    ============================================ */
-
 .fab-container {
   position: absolute;
   bottom: 20px;
@@ -130,17 +129,24 @@ Complete each task by adding CSS rules below.
    TASK 9: MULTI-LAYER TOOLTIP (HARD)
    Goal: Position tooltip 10px below button, centered horizontally
    ============================================ */
-
 .tooltip-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 .tooltip-box {
-  /* transform: translateX(-50%); */
-  /* margin-top: 10px; */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
 }
 
 .tooltip-arrow {
-  /* transform: translateX(-50%) translateY(-100%); */
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tooltip-content {
@@ -152,13 +158,21 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .dropdown-item {
+  position: relative;
 }
 
 .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
   margin-top: 2px;
 }
 
 .dropdown-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 2px;
 }
 
 /* ============================================
@@ -168,6 +182,10 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .page-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 /* ============================================
@@ -177,38 +195,54 @@ Complete each task by adding CSS rules below.
    ============================================ */
 
 .human-wrapper {
-  /* height: 200px; */
-  /* width: 120px; */
+  position: relative;
+  height: 200px;
+  width: 120px;
+  display: block;
 }
 
 .human-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
   transform: translateX(-50%);
 }
 
 .human-body {
+  position: absolute;
+  top: 50px;
+  left: 50%;
   transform: translateX(-50%);
 }
 
 .human-arm {
+  position: absolute;
+  top: 60px;
   transform-origin: top center;
 }
 
 .human-arm.left-arm {
+  left: 15px;
   transform: rotate(20deg);
 }
 
 .human-arm.right-arm {
+  right: 15px;
   transform: rotate(-20deg);
 }
 
 .human-leg {
+  position: absolute;
+  top: 130px;
   transform-origin: top center;
 }
 
 .human-leg.left-leg {
+  left: 35px;
   transform: rotate(5deg);
 }
 
 .human-leg.right-leg {
+  right: 35px;
   transform: rotate(-5deg);
 }
