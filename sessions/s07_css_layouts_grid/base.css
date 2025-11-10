@@ -4,14 +4,15 @@
 */
 
 :root {
-  --color-primary: #005a9c;
-  --color-secondary: #007acc;
-  --color-light: #e9f5ff;
-  --color-dark: #333;
-  --color-bg: #f4f7f6;
+  --color-primary: #1a1a1a;
+  --color-secondary: #6366f1;
+  --color-light: #f8fafc;
+  --color-dark: #0f172a;
+  --color-bg: #ffffff;
   --color-white: #ffffff;
-  --color-border: #d4d4d4;
-  --border-radius: 8px;
+  --color-border: #e2e8f0;
+  --color-accent: #64748b;
+  --border-radius: 12px;
 }
 
 body {
@@ -25,10 +26,10 @@ body {
 
 .main-header {
   text-align: center;
-  padding: 20px;
-  background: var(--color-primary);
+  padding: 32px 20px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: var(--color-white);
-  margin: -20px -20px 30px -20px;
+  margin: -20px -20px 40px -20px;
 }
 
 .main-header h1 {
@@ -39,104 +40,115 @@ body {
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
-  margin: 20px auto;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 24px auto;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
   max-width: 1200px;
 }
 
 .task-container h2 {
   color: var(--color-primary);
-  border-bottom: 2px solid var(--color-light);
-  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
   margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .task-container p {
   font-size: 0.95rem;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  color: var(--color-accent);
+  line-height: 1.7;
 }
 
 .task-container p code {
-  background: #eee;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
-  color: #c7254e;
+  background: var(--color-light);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  color: var(--color-secondary);
+  font-size: 0.85em;
+  font-weight: 500;
 }
 
 .grid-container {
-  border: 3px dashed var(--color-secondary);
+  border: 2px dashed var(--color-border);
   background: var(--color-light);
   border-radius: var(--border-radius);
-  padding: 10px;
+  padding: 16px;
   min-height: 150px;
 }
 
 /* Base Item Styles */
 .item {
   color: var(--color-white);
-  font-weight: bold;
-  padding: 20px;
-  border-radius: 6px;
+  font-weight: 500;
+  padding: 24px 20px;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Item color palette */
+/* Modern minimal color palette */
 .item:nth-child(6n+1) {
-  background: #e63946;
+  background: #6366f1;
 }
 
 .item:nth-child(6n+2) {
-  background: #457b9d;
+  background: #10b981;
 }
 
 .item:nth-child(6n+3) {
-  background: #1d3557;
+  background: #f59e0b;
 }
 
 .item:nth-child(6n+4) {
-  background: #fca311;
+  background: #ef4444;
 }
 
 .item:nth-child(6n+5) {
-  background: #588157;
+  background: #8b5cf6;
 }
 
 .item:nth-child(6n+6) {
-  background: #3a5a40;
+  background: #64748b;
 }
 
 
 /* Specific styles for named items */
 .task-3-header {
-  background: #d90429;
+  background: #1e40af;
 }
 
 .task-4-header {
-  background: #6d6875;
+  background: #374151;
 }
 
 .task-4-sidebar {
-  background: #b5838d;
+  background: #6b7280;
 }
 
 .task-4-main {
-  background: #e5989b;
+  background: #9ca3af;
+  color: var(--color-white);
 }
 
 .task-4-footer {
-  background: #6d6875;
+  background: #374151;
 }
 
 .nested-item {
-  background: #ffb703;
-  color: #333;
-  border: 1px solid #fb8500;
-  padding: 10px;
-  border-radius: 4px;
+  background: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-border);
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 #task-7-grid {
@@ -152,56 +164,57 @@ body {
 }
 
 .hg-header {
-  background: #264653;
+  background: #1f2937;
 }
 
 .hg-nav {
-  background: #2a9d8f;
+  background: #374151;
 }
 
 .hg-main {
-  background: #e9c46a;
-  color: #333;
+  background: var(--color-light);
+  color: var(--color-dark);
+  border: 2px solid var(--color-border);
 }
 
 .hg-aside {
-  background: #f4a261;
-  color: #333;
+  background: #6b7280;
+  color: var(--color-white);
 }
 
 .hg-footer {
-  background: #e76f51;
+  background: #1f2937;
 }
 
 /* Styles for Bento Box items (Task 11) */
 .bento-a {
-  background: #0c0a3e;
+  background: #1e40af;
 }
 
 .bento-b {
-  background: #721817;
+  background: #dc2626;
 }
 
 .bento-c {
-  background: #fa9f42;
+  background: #f59e0b;
 }
 
 .bento-d {
-  background: #2b4162;
+  background: #7c3aed;
 }
 
 .bento-e {
-  background: #a44a3f;
+  background: #059669;
 }
 
 .bento-f {
-  background: #2b9348;
+  background: #db2777;
 }
 
 .bento-g {
-  background: #55a630;
+  background: #ea580c;
 }
 
 .bento-h {
-  background: #007f5f;
+  background: #0891b2;
 }
