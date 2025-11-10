@@ -1,0 +1,207 @@
+/* * BASE.CSS
+ * This file provides all the non-grid-related styling.
+ * Your engineers should NOT need to edit this file.
+*/
+
+:root {
+  --color-primary: #005a9c;
+  --color-secondary: #007acc;
+  --color-light: #e9f5ff;
+  --color-dark: #333;
+  --color-bg: #f4f7f6;
+  --color-white: #ffffff;
+  --color-border: #d4d4d4;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 20px 50px 20px;
+}
+
+.main-header {
+  text-align: center;
+  padding: 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  margin: -20px -20px 30px -20px;
+}
+
+.main-header h1 {
+  margin: 0;
+}
+
+.task-container {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+}
+
+.task-container h2 {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-light);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.task-container p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.task-container p code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #c7254e;
+}
+
+.grid-container {
+  border: 3px dashed var(--color-secondary);
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  min-height: 150px;
+}
+
+/* Base Item Styles */
+.item {
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+
+/* Item color palette */
+.item:nth-child(6n+1) {
+  background: #e63946;
+}
+
+.item:nth-child(6n+2) {
+  background: #457b9d;
+}
+
+.item:nth-child(6n+3) {
+  background: #1d3557;
+}
+
+.item:nth-child(6n+4) {
+  background: #fca311;
+}
+
+.item:nth-child(6n+5) {
+  background: #588157;
+}
+
+.item:nth-child(6n+6) {
+  background: #3a5a40;
+}
+
+
+/* Specific styles for named items */
+.task-3-header {
+  background: #d90429;
+}
+
+.task-4-header {
+  background: #6d6875;
+}
+
+.task-4-sidebar {
+  background: #b5838d;
+}
+
+.task-4-main {
+  background: #e5989b;
+}
+
+.task-4-footer {
+  background: #6d6875;
+}
+
+.nested-item {
+  background: #ffb703;
+  color: #333;
+  border: 1px solid #fb8500;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#task-7-grid {
+  min-height: 300px;
+  /* Specific height for centering task */
+}
+
+#task-10-grid {
+  min-height: 400px;
+  /* Specific height for Holy Grail task */
+  height: 70vh;
+  /* Make it fill viewport height */
+}
+
+.hg-header {
+  background: #264653;
+}
+
+.hg-nav {
+  background: #2a9d8f;
+}
+
+.hg-main {
+  background: #e9c46a;
+  color: #333;
+}
+
+.hg-aside {
+  background: #f4a261;
+  color: #333;
+}
+
+.hg-footer {
+  background: #e76f51;
+}
+
+/* Styles for Bento Box items (Task 11) */
+.bento-a {
+  background: #0c0a3e;
+}
+
+.bento-b {
+  background: #721817;
+}
+
+.bento-c {
+  background: #fa9f42;
+}
+
+.bento-d {
+  background: #2b4162;
+}
+
+.bento-e {
+  background: #a44a3f;
+}
+
+.bento-f {
+  background: #2b9348;
+}
+
+.bento-g {
+  background: #55a630;
+}
+
+.bento-h {
+  background: #007f5f;
+}

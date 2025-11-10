@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="tasks.css">
+  <!-- You can link this later to show the solutions -->
+  <link rel="stylesheet" href="solutions.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <h1>CSS Grid Workshop: 10 Tasks</h1>
+  </header>
+
+  <main>
+    <!-- Task 1: Easy -->
+    <div class="task-container">
+      <h2>Task 1: Basic 3-Column Grid</h2>
+      <p>Create a simple grid with 3 equal-width columns.</p>
+      <div class="grid-container" id="task-1-grid">
+        <div class="item item-1">Item 1</div>
+        <div class="item item-2">Item 2</div>
+        <div class="item item-3">Item 3</div>
+        <div class="item item-4">Item 4</div>
+        <div class="item item-5">Item 5</div>
+        <div class="item item-6">Item 6</div>
+      </div>
+    </div>
+
+    <!-- Task 2: Easy -->
+    <div class="task-container">
+      <h2>Task 2: Adding Gaps</h2>
+      <p>Create the same 3-column grid, but this time add a <code>20px</code> gap between the columns and rows.</p>
+      <div class="grid-container" id="task-2-grid">
+        <div class="item item-1">Item 1</div>
+        <div class="item item-2">Item 2</div>
+        <div class="item item-3">Item 3</div>
+        <div class="item item-4">Item 4</div>
+        <div class="item item-5">Item 5</div>
+        <div class="item item-6">Item 6</div>
+      </div>
+    </div>
+
+    <!-- Task 3: Easy/Medium -->
+    <div class="task-container">
+      <h2>Task 3: Spanning Columns</h2>
+      <p>Create a 3-column grid where the first item (<code>.task-3-header</code>) spans all 3 columns.</p>
+      <div class="grid-container" id="task-3-grid">
+        <div class="item task-3-header">Header (Spans 3)</div>
+        <div class="item item-2">Item 2</div>
+        <div class="item item-3">Item 3</div>
+        <div class="item item-4">Item 4</div>
+      </div>
+    </div>
+
+    <!-- Task 4: Medium -->
+    <div class="task-container">
+      <h2>Task 4: Using <code>grid-template-areas</code></h2>
+      <p>Use <code>grid-template-areas</code> to create a classic sidebar-main layout. The header and footer should span
+        both columns.</p>
+      <div class="grid-container" id="task-4-grid">
+        <div class="item task-4-header">Header</div>
+        <div class="item task-4-sidebar">Sidebar</div>
+        <div class="item task-4-main">Main Content</div>
+        <div class="item task-4-footer">Footer</div>
+      </div>
+    </div>
+
+    <!-- Task 5: Medium -->
+    <div class="task-container">
+      <h2>Task 5: Mixed Units (Fixed and Fluid)</h2>
+      <p>Create a 3-column layout where the first and last columns are fixed at <code>150px</code> wide, and the middle
+        column takes up the remaining available space.</p>
+      <div class="grid-container" id="task-5-grid">
+        <div class="item item-1">150px</div>
+        <div class="item item-2">Fluid (1fr)</div>
+        <div class="item item-3">150px</div>
+      </div>
+    </div>
+
+    <!-- Task 6: Medium -->
+    <div class="task-container">
+      <h2>Task 6: Implicit Grid (<code>grid-auto-rows</code>)</h2>
+      <p>Define a 3-column grid but <strong>don't</strong> define any explicit rows. Set <code>grid-auto-rows</code> so
+        that any new rows that are implicitly created are <code>100px</code> tall.</p>
+      <div class="grid-container" id="task-6-grid">
+        <div class="item item-1">Item 1</div>
+        <div class="item item-2">Item 2</div>
+        <div class="item item-3">Item 3</div>
+        <div class="item item-4">Item 4</div>
+        <div class="item item-5">Item 5</div>
+      </div>
+    </div>
+
+    <!-- Task 7: Medium/Hard -->
+    <div class="task-container">
+      <h2>Task 7: Centering with <code>place-items</code></h2>
+      <p>This grid container is <code>300px</code> tall. Use a <strong>single</strong> grid property to perfectly center
+        the item both horizontally and vertically.</p>
+      <div class="grid-container" id="task-7-grid">
+        <div class="item item-1" style="width: 100px; height: 100px;">Center Me</div>
+      </div>
+    </div>
+
+    <!-- Task 8: Hard -->
+    <div class="task-container">
+      <h2>Task 8: Responsive Cards with <code>auto-fit</code> & <code>minmax</code></h2>
+      <p>Create a responsive card gallery. The columns should be flexible (<code>1fr</code>), but they should never get
+        smaller than <code>250px</code>. As the viewport grows, more columns should fit. Use <code>auto-fit</code> and
+        <code>minmax</code>.
+      </p>
+      <div class="grid-container" id="task-8-grid">
+        <div class="item item-1">Card 1</div>
+        <div class="item item-2">Card 2</div>
+        <div class="item item-3">Card 3</div>
+        <div class="item item-4">Card 4</div>
+        <div class="item item-5">Card 5</div>
+        <div class="item item-6">Card 6</div>
+      </div>
+    </div>
+
+    <!-- Task 9: Hard -->
+    <div class="task-container">
+      <h2>Task 9: Nested Grids</h2>
+      <p>Make the main container a 2-column grid. Then, make the second item (<code>.task-9-nested</code>) a grid
+        container itself, with 2 equal-width columns.</p>
+      <div class="grid-container" id="task-9-grid">
+        <div class="item item-1">Main Item 1</div>
+        <div class="item item-2 task-9-nested">
+          <div class="nested-item">Nested 1</div>
+          <div class="nested-item">Nested 2</div>
+          <div class="nested-item">Nested 3</div>
+          <div class="nested-item">Nested 4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 10: Hard -->
+    <div class="task-container">
+      <h2>Task 10: The Holy Grail Layout</h2>
+      <p>Create the "Holy Grail" layout. Header and Footer span the full width. The main content area has a Nav
+        (<code>120px</code>), a Main content block (fluid), and an Aside (<code>120px</code>). The central row (with
+        nav, main, aside) should fill the remaining vertical space.</p>
+      <div class="grid-container" id="task-10-grid">
+        <div class="item hg-header">Header</div>
+        <div class="item hg-nav">Nav</div>
+        <div class="item hg-main">Main Content</div>
+        <div class="item hg-aside">Aside</div>
+        <div class="item hg-footer">Footer</div>
+      </div>
+    </div>
+
+    <!-- Task 11: Mega Hard - Bento Box Layout -->
+    <div class="task-container">
+      <h2>Task 11: Mega Hard - Responsive Bento (with Areas)</h2>
+      <p>This is a true test of grid. Recreate this 4x4 bento box layout. For the real challenge:
+        <br>1. You <strong>must</strong> use <code>grid-template-areas</code> to define the main layout.
+        <br>2. On viewports smaller than <code>768px</code>, the layout must collapse into a <strong>single
+          column</strong>.
+      </p>
+      <div class="grid-container" id="task-11-grid">
+        <div class="item bento-a">A (2x2)</div>
+        <div class="item bento-b">B (1x1)</div>
+        <div class="item bento-c">C (1x1)</div>
+        <div class="item bento-d">D (2x1)</div>
+        <div class="item bento-e">E (2x2)</div>
+        <div class="item bento-f">F (1x1)</div>
+        <div class="item bento-g">G (1x1)</div>
+        <div class="item bento-h">H (2x1)</div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
