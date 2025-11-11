@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.hobby-list {
+  color: #2d3748;
+  line-height: 1.5;
+  list-style-type: none;
+  width: max-content;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-list li {
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #f7fafc;
+}
+
+.hobby-list:has(li:hover) li:not(:hover) {
+  opacity: 0.4;
+  background: #edf2f7;
+}
+
+.hobby-list li:hover {
+  opacity: 1;
+  color: #c53030;
+  background: #fff5f5;
+  transform: translateX(10px) scale(1.05);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(197, 48, 48, 0.3);
+}
+
+.hobby-list:has(li:hover) li:has(+ li:hover) {
+  opacity: 1;
+  color: #38a169;
+  background: #f0fff4;
+  transform: translateX(6px) scale(1.03);
+}
+
+.hobby-list:has(li:hover) li:has(+ li + li:hover) {
+  opacity: 0.75;
+  color: #38a169;
+  background: #f0fff4;
+  transform: scale(1.01);
+}
+
+.hobby-list:has(li:hover) li:hover + li {
+  opacity: 1;
+  color: #3182ce;
+  background: #ebf8ff;
+  transform: translateX(6px) scale(1.03);
+}
+
+.hobby-list:has(li:hover) li:hover + li + li {
+  opacity: 0.75;
+  color: #3182ce;
+  background: #ebf8ff;
+  transform: scale(1.01);
+}

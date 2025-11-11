@@ -1,0 +1,121 @@
+a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.85em;
+  color: #1b87e6;
+}
+
+label:has(+ input[required])::after {
+  content: " *";
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.zebra-list li:nth-child(even) {
+  background-color: #e9ecef;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+h2 + p {
+  background-color: #fff9e6;
+  padding: 0.75rem;
+  border-left: 3px solid #ffc107;
+  border-radius: 4px;
+}
+
+.box:first-child {
+  background-color: #d1ecf1;
+  border-color: #0dcaf0;
+  font-weight: 600;
+}
+
+.box:last-child {
+  background-color: #d1f2eb;
+  border-color: #20c997;
+  font-style: italic;
+}
+
+.form-field:has(input:invalid) {
+  background-color: #f8d7da;
+  border: 2px solid #dc3545;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.form-field:has(input:valid) {
+  background-color: #d1f2eb;
+  border: 2px solid #20c997;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.card:has(img) button:nth-of-type(2) {
+  background-color: #dc3545;
+}
+
+.card:has(img) button:nth-of-type(2):hover {
+  background-color: #bb2d3b;
+}
+
+.menu > li {
+  background-color: #f1f3f5;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.menu > li:hover {
+  background-color: #1b87e6;
+  color: white;
+}
+
+.menu li ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.menu li ul li {
+  background-color: #dee2e6;
+  padding: 0.35rem 0.6rem;
+  margin-bottom: 0.25rem;
+  font-weight: normal;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.menu li ul li:hover {
+  background-color: #495057;
+  color: white;
+}
+
+.steps {
+  counter-reset: step-num;
+  list-style: none;
+  padding-left: 0;
+}
+
+.step {
+  counter-increment: step-num;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.step::before {
+  content: counter(step-num);
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+  background: linear-gradient(135deg, #1b87e6 0%, #1b3380 100%);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
