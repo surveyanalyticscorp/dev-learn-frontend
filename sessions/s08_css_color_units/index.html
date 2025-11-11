@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units & Colors - Learning Session</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>CSS Units & Colors</h1>
+    <p>Understanding measurement units and color systems in modern web development</p>
+  </header>
+
+  <main>
+    <!-- CSS UNITS SECTION -->
+    <section>
+      <h2>CSS Units</h2>
+      <!-- Pixels -->
+      <article class="concept">
+        <h3>Pixels (px)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>Fixed unit representing a single pixel on the screen</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Precise control, consistent across devices, great for borders and small elements</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Borders, icons, fixed-size elements, fine details</p>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>🎨 Other absolute units:</strong> There are some more units like <code>cm</code> <code>in</code>
+            <code>Q</code> etc. You can read more <a
+              href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units">here</a>.
+          </p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Use px for font sizes or large layouts - they don't scale with user preferences!
+            Read more <a
+              href="https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/">here</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Em -->
+      <article class="concept">
+        <h3>Em (em)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>Relative to the font-size of the parent element</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Scales with parent context, maintains proportions, good for component-based design</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Padding/margin within components, nested elements, component spacing</p>
+          </div>
+        </div>
+        <div class="examples">
+          <div class="em-parent" style="font-size: 16px;">
+            Parent: 16px
+            <div class="demo-text" style="font-size: 1em;">1em text (16px)</div>
+            <div class="demo-box" style="width: 10em; height: 3em;">10em × 3em box</div>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>🎨 Magic:</strong> One base color becomes an entire palette using CSS relative color syntax!
+            Perfect for creating consistent brand color systems.</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Cutting Edge:</strong> CSS relative color syntax (using 'from' keyword) is very new - check
+            browser support for production use!</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Nest multiple em units deeply - they compound and become unpredictable!</p>
+        </div>
+      </article>
+
+      <!-- Rem -->
+      <article class="concept">
+        <h3>Root Em (rem)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>Relative to the root element's font-size (usually html tag)</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Consistent scaling, not affected by parent elements, predictable sizing</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Typography, spacing systems, global layout, most responsive designs</p>
+          </div>
+        </div>
+        <div class="examples">
+          <div class="rem-parent" style="font-size: 24px;">
+            Parent: 32px (doesn't affect rem)
+            <div class="demo-text" style="font-size: 1rem;">1rem text (16px - from root)</div>
+            <div class="demo-box" style="width: 15rem; height: 4rem;">15rem × 4rem box</div>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> rem is perfect for consistent spacing systems - 1rem = your base font size
+            everywhere!</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Mix px and rem randomly - choose one system for consistency!</p>
+        </div>
+      </article>
+
+      <!-- Basic Viewport Units -->
+      <article class="concept">
+        <h3>Basic Viewport Units (vw, vh)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>vw: viewport width (1vw = 1% of viewport width), vh: viewport height (1vh = 1% of viewport height)</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>True responsive design that adapts to any screen size without media queries</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Full-screen sections, hero banners, responsive typography, responsive containers</p>
+          </div>
+        </div>
+        <div class="examples">
+          <div class="demo-box" style="width: 20vw; height: 50px;">20vw width</div>
+          <div class="demo-box" style="width: 100px; height: 15vh;">15vh height</div>
+          <div class="demo-text" style="font-size: 4vw;">Responsive text: 4vw</div>
+          <div class="demo-box" style="width: 50vw; height: 30vh;">50vw × 30vh responsive box</div>
+        </div>
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> 100vw = full screen width, 100vh = full screen height. Perfect for hero
+            sections!</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Use vh for mobile layouts - it doesn't account for browser UI changes!</p>
+        </div>
+        <div class="definition">
+          <p><strong>📖 Definition:</strong> Viewport = the visible area of a web page in the browser window</p>
+        </div>
+      </article>
+
+      <!-- Modern Viewport Units -->
+      <article class="concept">
+        <h3>Modern Viewport Units (dvh, svh)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>dvh: dynamic viewport height, svh: small viewport height - mobile-friendly alternatives to vh</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Handle mobile browser UI changes (address bar, toolbars) that traditional vh ignores</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Mobile-first layouts, full-screen mobile apps, responsive designs that work on phones</p>
+          </div>
+        </div>
+        <div class="examples">
+          <div class="demo-box" style="width: 150px; height: 10dvh;">10dvh (dynamic)</div>
+          <div class="demo-box" style="width: 150px; height: 10svh;">10svh (small)</div>
+          <div class="demo-box pill" style="width: 200px; height: 40px; border-radius: 100svh;">Pill shape: 100svh
+            radius</div>
+          <div class="demo-box" style="width: 300px; height: 20dvh;">Mobile-safe: 20dvh</div>
+        </div>
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> <code>border-radius: 100svh</code> creates perfect pill shapes! Use
+            <code>dvh</code> for better mobile UX.
+          </p>
+        </div>
+        <div class="definition">
+          <p><strong>📖 Definition:</strong> dvh adjusts when mobile UI shows/hides, svh uses the smallest possible
+            height</p>
+        </div>
+      </article>
+
+      <!-- Modern Units -->
+      <article class="concept">
+        <h3>Modern Units (ch, ex, lh)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>ch: character width, ex: x-height, lh: line-height</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Typography-aware sizing, better text layouts, font-relative measurements</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Text containers, form inputs, reading-optimized layouts</p>
+          </div>
+        </div>
+        <div class="examples">
+          <div class="demo-text" style="width: 35ch;">35ch width - perfect for reading! This text container is sized
+            based on character count, not pixels.</div>
+          <div class="demo-text" style="width: 10lh; height: 4lh;">2lh text size - double the line height</div>
+          <div class="demo-box" style="width: 20ex; height: 4ex;">20ex × 4ex box</div>
+        </div>
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> Use 45-75ch for optimal reading width - that's the sweet spot for text
+            legibility!</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Use these units for layout grids - they're font-dependent and can break layouts!
+          </p>
+        </div>
+        <div class="definition">
+          <p><strong>📖 Definitions:</strong> ch = width of "0" character, ex = height of "x" character, lh = computed
+            line-height</p>
+        </div>
+      </article>
+
+      <!-- CSS Functions -->
+      <article class="concept">
+        <h3>CSS Functions (min, max, clamp)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>min(): smallest value, max(): largest value, clamp(): value within range</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Responsive design without media queries, fluid typography, flexible layouts</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Fluid typography, responsive spacing, container sizes, accessibility</p>
+          </div>
+        </div>
+
+        <div class="examples">
+          <div class="demo-text" style="font-size: min(5vw, 2rem);">min(5vw, 2rem) text - capped at 2rem</div>
+          <div class="demo-text" style="font-size: max(1rem, 3vw);">max(1rem, 3vw) text - minimum 1rem</div>
+          <div class="demo-text" style="font-size: clamp(1rem, 4vw, 3rem);">clamp(1rem, 4vw, 3rem) - smooth scaling
+          </div>
+          <div class="demo-box" style="width: clamp(200px, 50vw, 600px); height: 60px;">Responsive box: clamp(200px,
+            50vw, 600px)</div>
+        </div>
+
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> <code>clamp()</code> replaces complex media queries! One line = perfect
+            responsive typography.</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Overuse clamp() - sometimes simple fixed sizes are better for predictability!
+          </p>
+        </div>
+        <div class="definition">
+          <p><strong>📖 clamp() syntax:</strong> clamp(minimum, preferred, maximum) - the preferred value is constrained
+            between min and max</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- CSS COLORS SECTION -->
+    <section>
+      <h2>CSS Colors</h2>
+
+      <!-- Traditional Colors -->
+      <article class="concept">
+        <h3>Traditional Color Formats</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>Named, Hex, RGB/RGBA, HSL/HSLA - the classic color formats</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Wide support, familiar to developers, good for basic designs</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Standard web projects, when broad browser support is needed</p>
+          </div>
+        </div>
+        <div class="color-grid">
+          <div class="color-demo">
+            <div class="color-box" style="background-color: rebeccapurple;">rebeccapurple</div>
+            <span>Named: rebeccapurple</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box" style="background-color: #3498db;">#3498db</div>
+            <span>Hex: #3498db</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box" style="background-color: rgb(52, 152, 219);">rgb</div>
+            <span>RGB: rgb(52, 152, 219)</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box" style="background-color: rgba(52, 152, 219, 0.7);">rgba</div>
+            <span>RGBA: rgba(52, 152, 219, 0.7)</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box" style="background-color: hsl(204, 70%, 53%);">hsl</div>
+            <span>HSL: hsl(204, 70%, 53%)</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box" style="background-color: hsla(204, 70%, 53%, 0.8);">hsla</div>
+            <span>HSLA: hsla(204, 70%, 53%, 0.8)</span>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> Use rebeccapurple (#663399) - it's named after Rebecca Alison Meyer, showing
+            CSS community heart!</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Don't:</strong> Use named colors like "blue" or "red" in production - they're too generic and
+            unpredictable!</p>
+        </div>
+        <div class="definition">
+          <p><strong>📖 HSL breakdown:</strong> Hue (0-360°), Saturation (0-100%), Lightness (0-100%) - much more
+            intuitive than RGB values!</p>
+        </div>
+      </article>
+
+      <!-- Modern Color Formats -->
+      <article class="concept">
+        <h3>Modern Color Formats (P3 & Beyond)</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>OKLCH, OKLAB, Display P3 - next-generation color spaces with wider gamuts. <a
+                href="https://www.joshwcomeau.com/css/color-formats/">Read More</a></p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p><strong>Better displays deserve better colors!</strong> Modern screens can show 25% more colors than
+              sRGB. These formats provide: perceptual uniformity, wider gamut, better color manipulation</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>High-end displays, brand-critical colors, future-proof designs, creative applications</p>
+          </div>
+        </div>
+        <div class="color-grid">
+          <div class="color-demo">
+            <div class="color-box modern" style="background-color: oklch(70% 0.15 180);">oklch</div>
+            <span>OKLCH: oklch(70% 0.15 180)</span>
+            <small>Perceptually uniform</small>
+          </div>
+          <div class="color-demo">
+            <div class="color-box modern" style="background-color: oklab(70% -0.1 0.1);">oklab</div>
+            <span>OKLAB: oklab(70% -0.1 0.1)</span>
+            <small>Better gradients</small>
+          </div>
+          <div class="color-demo">
+            <div class="color-box modern" style="background-color: color(display-p3 0.2 0.7 0.9);">p3</div>
+            <span>P3: color(display-p3 0.2 0.7 0.9)</span>
+            <small>Wide gamut</small>
+          </div>
+          <div class="color-demo">
+            <div class="color-box modern" style="background-color: lch(60% 50 230);">lch</div>
+            <span>LCH: lch(60% 50 230)</span>
+            <small>Lightness control</small>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>💡 Pro tip:</strong> Use these for vibrant, saturated colors that look stunning on modern displays
+            (iPhone, MacBook, high-end monitors)</p>
+        </div>
+      </article>
+
+      <!-- Color Functions -->
+      <article class="concept">
+        <h3>Color Functions</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>color-mix(), color-contrast(), relative color syntax - dynamic color manipulation</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Create color relationships, maintain accessibility, reduce CSS variables</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Design systems, theme variations, accessible color palettes</p>
+          </div>
+        </div>
+        <div class="color-grid">
+          <div class="color-demo">
+            <div class="color-box" style="background-color: color-mix(in srgb, blue 30%, red);">mix</div>
+            <span>Mix: color-mix(in srgb, blue 30%, red)</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box" style="background-color: color-mix(in oklch, yellow 50%, purple);">oklch mix</div>
+            <span>OKLCH Mix: better gradients</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box relative" style="background-color: hsl(from #3498db h s calc(l + 20));">relative
+            </div>
+            <span>Relative: hsl(from #3498db h s calc(l + 20%))</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CSS-Only Color Palette -->
+      <article class="concept">
+        <h3>CSS-Only Color Palettes</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>Generate entire color palettes from a single base color using "from" syntax and relative color functions
+            </p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Consistent color relationships, automatic theme variations, fewer variables to maintain</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Design systems, theme generation, brand color variations, accessible color scales</p>
+          </div>
+        </div>
+        <div class="palette-demo">
+          <h4>OKLCH Palette (Base: oklch(65% 0.15 250))</h4>
+          <div class="color-grid">
+            <div class="color-demo">
+              <div class="color-box" style="background-color: oklch(from oklch(65% 0.15 250) calc(l + 0.2) c h)">lighter
+              </div>
+              <span>oklch(from base calc(l + 0.2) c h)</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: oklch(65% 0.15 250);">base</div>
+              <span>oklch(65% 0.15 250) - base color</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: oklch(from oklch(65% 0.15 250) calc(l - 0.2) c h);">darker
+              </div>
+              <span>oklch(from base calc(l - 0.2) c h)</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: oklch(from oklch(65% 0.15 250) l calc(c * 0.5) h);">muted
+              </div>
+              <span>oklch(from base l calc(c * 0.5) h)</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: oklch(from oklch(65% 0.15 250) l c calc(h + 120));">
+                complement</div>
+              <span>oklch(from base l c calc(h + 120))</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top: 2rem;">HSL Palette (Base: hsl(200 70% 50%))</h4>
+          <div class="color-grid">
+            <div class="color-demo">
+              <div class="color-box" style="background-color: hsl(from hsl(200 70% 50%) h s calc(l + 30));">light</div>
+              <span>hsl(from base h s calc(l + 30))</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: hsl(200 70% 50%);">base</div>
+              <span>hsl(200 70% 50%) - base color</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: hsl(from hsl(200 70% 50%) h s calc(l - 20));">dark</div>
+              <span>hsl(from base h s calc(l - 20))</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: hsl(from hsl(200 70% 50%) h calc(s * 0.3) l);">desaturated
+              </div>
+              <span>hsl(from base h calc(s * 0.3) l)</span>
+            </div>
+            <div class="color-demo">
+              <div class="color-box" style="background-color: hsl(from hsl(200 70% 50%) calc(h + 180) s l);">opposite
+              </div>
+              <span>hsl(from base calc(h + 180) s l)</span>
+            </div>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>🎨 Magic:</strong> One base color becomes an entire palette! Shows the power of HSL/OKLCH for
+            creating consistent color systems.</p>
+        </div>
+        <div class="warning">
+          <p><strong>⚠️ Future:</strong> CSS relative color syntax (using 'from' keyword) is coming but has limited
+            browser support. These examples show the concept with compatible values.</p>
+        </div>
+      </article>
+
+      <!-- Human Color Perception -->
+      <article class="concept">
+        <h3>Why HSL/OKLCH > RGB/Hex?</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>HSL and OKLCH match how humans perceive color: Hue (color family), Saturation/Chroma (intensity),
+              Lightness</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p><strong>Human-friendly:</strong> We think "make it bluer" or "make it lighter" - not "add more red
+              channel"</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Color manipulation, theme systems, design tools, programmatic color generation</p>
+          </div>
+        </div>
+        <div class="comparison">
+          <div class="comparison-item">
+            <h4>RGB/Hex Approach</h4>
+            <div class="code-example">
+              <code>
+                // Make blue lighter?<br>
+                #3498db → #4ba6e7 → #63b4f1<br>
+                // Complex math, unintuitive
+              </code>
+            </div>
+            <p>❌ Hard to modify programmatically</p>
+          </div>
+          <div class="comparison-item">
+            <h4>HSL/OKLCH Approach</h4>
+            <div class="code-example">
+              <code>
+                // Make blue lighter?<br>
+                hsl(204 70% 53%) → hsl(204 70% 63%)<br>
+                // Just increase lightness!
+              </code>
+            </div>
+            <p>✅ Intuitive and programmable</p>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>🧠 Pro insight:</strong> HSL/OKLCH align with human vision - we see hue, intensity, and brightness
+            as separate dimensions. Perfect for creating color variations in code!</p>
+        </div>
+      </article>
+
+      <!-- Special Color Keywords -->
+      <article class="concept">
+        <h3>Special Color Keywords</h3>
+        <div class="info">
+          <div class="what">
+            <h4>What</h4>
+            <p>currentColor, transparent, inherit - contextual color values</p>
+          </div>
+          <div class="why">
+            <h4>Why</h4>
+            <p>Maintain color relationships, create flexible components, reduce redundancy</p>
+          </div>
+          <div class="when">
+            <h4>When to use</h4>
+            <p>Icon colors, border colors, component theming</p>
+          </div>
+        </div>
+        <div class="color-grid">
+          <div class="color-demo" style="color: #e74c3c;">
+            <div class="color-box" style="background-color: transparent; border: 3px solid currentColor;">currentColor
+            </div>
+            <span>currentColor (inherits text color)</span>
+          </div>
+          <div class="color-demo">
+            <div class="color-box"
+              style="background-color: transparent; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%);">
+              transparent</div>
+            <span>transparent</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Comparison Section -->
+    <section>
+      <h2>Visual Comparisons</h2>
+
+      <article class="concept">
+        <h3>Why Modern Colors Matter</h3>
+        <div class="comparison">
+          <div class="comparison-item">
+            <h4>sRGB (Traditional)</h4>
+            <div class="color-strip">
+              <div class="color-box" style="background-color: rgb(255, 0, 100);">Vibrant Pink</div>
+              <div class="color-box" style="background-color: rgb(0, 255, 150);">Bright Green</div>
+              <div class="color-box" style="background-color: rgb(100, 100, 255);">Deep Blue</div>
+            </div>
+            <p>Limited to ~16.7 million colors</p>
+          </div>
+          <div class="comparison-item">
+            <h4>P3 (Modern)</h4>
+            <div class="color-strip">
+              <div class="color-box modern" style="background-color: color(display-p3 1 0 0.4);">Vibrant Pink</div>
+              <div class="color-box modern" style="background-color: color(display-p3 0 1 0.6);">Bright Green</div>
+              <div class="color-box modern" style="background-color: color(display-p3 0.4 0.4 1);">Deep Blue</div>
+            </div>
+            <p>25% more colors, more saturated, more accurate</p>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>🎨 The difference:</strong> On capable displays, P3 colors appear more vibrant and true-to-life.
+            Perfect for brand colors, photography, and creative work.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+/* CSS Units & Colors - Learning Session */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #fdfdfd;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 3rem 0 1.5rem 0;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 2rem 0 1rem 0;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* Layout */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem 2rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* Concept Cards */
+.concept {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Info Grid */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.what,
+.why,
+.when {
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #4299e1;
+}
+
+.why {
+  border-left-color: #48bb78;
+}
+
+.when {
+  border-left-color: #ed8936;
+}
+
+/* Examples */
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.demo-box {
+  background: #4299e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 500;
+  min-width: 60px;
+  min-height: 30px;
+  text-align: center;
+}
+
+.demo-text {
+  background: #4299e1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  display: inline-block;
+}
+
+.em-parent,
+.rem-parent {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 0.5rem;
+  background: #f8fafc;
+}
+
+.em-parent>div,
+.rem-parent>div {
+  margin: 0.5rem 0;
+}
+
+/* Color Grid */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.color-demo {
+  text-align: center;
+}
+
+.color-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin: 0 auto 0.5rem auto;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+}
+
+.color-demo span {
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.color-demo small {
+  display: block;
+  color: #718096;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+/* Modern color indicator */
+.color-box.modern {
+  box-shadow: 0 0 0 2px #f093fb, 0 0 0 4px rgba(240, 147, 251, 0.2);
+}
+
+/* Pill shape demo */
+.demo-box.pill {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Palette Demo */
+.palette-demo {
+  margin-top: 1.5rem;
+}
+
+.palette-demo h4 {
+  color: #4a5568;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Code Examples */
+.code-example {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.code-example code {
+  background: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Inline code */
+code {
+  background: #f1f5f9;
+  color: #1a202c;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+/* Notes, Warnings, and Definitions */
+.note {
+  background: #edf2f7;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-left: 4px solid #4299e1;
+}
+
+.note p {
+  margin: 0;
+  color: #2d3748;
+}
+
+.warning {
+  background: #fef5e7;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #ed8936;
+}
+
+.warning p {
+  margin: 0;
+  color: #744210;
+}
+
+.definition {
+  background: #f0fff4;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #48bb78;
+}
+
+.definition p {
+  margin: 0;
+  color: #22543d;
+  font-style: italic;
+}
+
+/* Comparison Section */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.comparison-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.color-strip {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.color-strip .color-box {
+  width: 60px;
+  height: 60px;
+  font-size: 0.7rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
