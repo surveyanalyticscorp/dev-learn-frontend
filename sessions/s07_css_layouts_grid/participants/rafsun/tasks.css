@@ -1,0 +1,180 @@
+#task-1-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#task-2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+#task-3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.task-3-header {
+  grid-column: 1/-1;
+}
+
+#task-4-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 12px;
+}
+
+.task-4-header {
+  grid-area: header;
+}
+
+.task-4-sidebar {
+  grid-area: sidebar;
+}
+
+.task-4-main {
+  grid-area: main;
+}
+
+.task-4-footer {
+  grid-area: footer;
+}
+
+#task-5-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  gap: 15px;
+}
+
+#task-6-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+#task-7-grid {
+  display: grid;
+  place-items: center;
+}
+
+#task-8-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#task-9-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.task-9-nested {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+#task-10-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  gap: 12px;
+}
+
+.hg-header {
+  grid-area: header;
+}
+
+.hg-nav {
+  grid-area: nav;
+}
+
+.hg-main {
+  grid-area: main;
+}
+
+.hg-aside {
+  grid-area: aside;
+}
+
+.hg-footer {
+  grid-area: footer;
+}
+
+#task-11-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas:
+    "a a b b"
+    "a a c c"
+    "d d e e"
+    "f g e e";
+  gap: 10px;
+}
+
+.bento-a {
+  grid-area: a;
+}
+
+.bento-b {
+  grid-area: b;
+}
+
+.bento-c {
+  grid-area: c;
+}
+
+.bento-d {
+  grid-area: d;
+}
+
+.bento-e {
+  grid-area: e;
+}
+
+.bento-f {
+  grid-area: f;
+}
+
+.bento-g {
+  grid-area: g;
+}
+
+.bento-h {
+  grid-column: 3 / 5;
+  grid-row: 4;
+}
+
+@media (max-width: 767px) {
+  #task-11-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h";
+  }
+
+  .bento-h {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
