@@ -119,6 +119,7 @@
 */
 #task-7-grid {
   display: grid;
+  place-items: center;
   /* Your code here */
 }
 
