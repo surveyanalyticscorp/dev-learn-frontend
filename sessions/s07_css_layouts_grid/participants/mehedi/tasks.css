@@ -105,6 +105,9 @@
 */
 #task-6-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-auto-rows: 100px;
   /* Your code here */
 }
 
