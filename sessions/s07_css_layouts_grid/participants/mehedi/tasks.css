@@ -139,12 +139,15 @@
 */
 #task-9-grid {
   display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .task-9-nested {
   /* This item becomes a grid container */
   display: grid;
-  /* Your code here */
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
 }
 
 
