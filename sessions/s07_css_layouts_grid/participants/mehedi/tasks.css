@@ -159,28 +159,39 @@
  * 4. Assign all items to their correct grid-area.
 */
 #task-10-grid {
+  height: 60vh;
   display: grid;
-  /* Your code here */
-}
+  grid-template-columns: 120px 1fr 120px;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  gap: 10px;
+  grid-template-rows: auto 1fr auto; 
+} 
+
 
 .hg-header {
-  /* Your code here */
+  grid-area: header;
+
 }
 
 .hg-nav {
-  /* Your code here */
+  grid-area: nav;
+
 }
 
 .hg-main {
-  /* Your code here */
+  grid-area: main;
+
 }
 
 .hg-aside {
-  /* Your code here */
+  grid-area: aside;
 }
 
 .hg-footer {
-  /* Your code here */
+  grid-area: footer;
 }
 
 /*
