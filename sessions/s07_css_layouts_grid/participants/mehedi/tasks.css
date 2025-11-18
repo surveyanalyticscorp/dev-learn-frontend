@@ -1,0 +1,262 @@
+/*
+ * Task 1: Basic 3-Column Grid
+ * Make this container a grid with 3 equal-width columns.
+*/
+#task-1-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Your code here */
+}
+
+
+/*
+ * Task 2: Adding Gaps
+ * Make this a 3-column grid and add a 20px gap between columns & 40px between rows.
+*/
+#task-2-grid {
+  display: grid;
+  gap: 40px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Your code here */
+}
+
+
+/*
+ * Task 3: Spanning Columns
+ * 1. Make this container a 3-column grid with a 10px gap.
+ * 2. Target the '.task-3-header' and make it span all 3 columns.
+*/
+#task-3-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  
+  /* Your code here */
+}
+
+.task-3-header {
+  /* Your code here */
+  grid-column: span 3;
+}
+
+
+/*
+ * Task 4: Using `grid-template-areas`
+ * 1. Define the grid and use `grid-template-areas` to create this layout:
+ * 2. Also set the column widths: sidebar 200px, main 1fr.
+ * 3. Assign each element to its named area.
+*/
+#task-4-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+    gap: 10px;
+  /* Your code here */
+}
+
+.task-4-header {
+  grid-area: header;
+    grid-column: span 5;
+
+  /* Your code here */
+}
+
+.task-4-sidebar {
+  grid-area: sidebar;
+  grid-column: span 1;
+  /* Your code here */
+}
+
+.task-4-main {
+  grid-area: main;
+  grid-column: span 4;
+  /* Your code here */
+}
+
+.task-4-footer {
+  grid-area: footer;
+    grid-column: span 5;
+
+  /* Your code here */
+}
+
+
+/*
+ * Task 5: Mixed Units (Fixed and Fluid)
+ * Create a 3-column layout:
+ * Add a 15px gap.
+*/
+#task-5-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  gap: 15px;
+  /* Your code here */
+}
+
+
+/*
+ * Task 6: Implicit Grid
+ * 1. Create a 3-column, 1fr grid.
+ * 2. Add a 10px gap.
+ * 3. Created rows should have a height of 100px.
+*/
+#task-6-grid {
+  display: grid;
+  /* Your code here */
+}
+
+
+/*
+ * Task 7: Centering
+ * Use a SINGLE grid property to perfectly center the child item.
+ * (Remember: the container is 300px tall from base.css)
+*/
+#task-7-grid {
+  display: grid;
+  /* Your code here */
+}
+
+
+/*
+ * Task 8: Responsive Cards
+ * 1. Create a grid with a 1rem gap.
+ * 3. Each column should be a minimum of 250px and a maximum of 1fr.
+*/
+#task-8-grid {
+  display: grid;
+  /* Your code here */
+}
+
+
+/*
+ * Task 9: Nested Grids
+ * 1. Make the main `#task-9-grid` container a 2-column (1fr 1fr) grid with a 10px gap.
+ * 2. Target the `.task-9-nested` item and make IT a grid container.
+ * 3. The nested grid should have 2 equal columns and a 5px gap.
+*/
+#task-9-grid {
+  display: grid;
+  /* Your code here */
+}
+
+.task-9-nested {
+  /* This item becomes a grid container */
+  display: grid;
+  /* Your code here */
+}
+
+
+/*
+ * Task 10: The Holy Grail Layout
+ * This is a tough one!
+ * 1. Use `grid-template-areas` to define the layout.
+ * 2. Define the column widths: Nav (120px), Main (1fr), Aside (120px).
+ * 4. Assign all items to their correct grid-area.
+*/
+#task-10-grid {
+  display: grid;
+  /* Your code here */
+}
+
+.hg-header {
+  /* Your code here */
+}
+
+.hg-nav {
+  /* Your code here */
+}
+
+.hg-main {
+  /* Your code here */
+}
+
+.hg-aside {
+  /* Your code here */
+}
+
+.hg-footer {
+  /* Your code here */
+}
+
+/*
+ * Task 11: Mega Hard - Bento Box Layout
+ * This is the ultimate challenge!
+ * 1. Define a grid with 4 equal-width columns and 4 equal-height rows.
+ * 2. Use `grid-column` and `grid-row` to make each item span.
+ * - A should span 2x2
+ * - B should span 1x1
+ * - C should span 1x1
+ * - D should span 2x1
+ * - E should span 2x2
+ * - F should span 1x1
+ * - G should span 1x1
+ * - H should span 2x1
+ * 3. Arrange them to create a perfect, gap-free 4x4 layout.
+*/
+#task-11-grid {
+  display: grid;
+  /* Your code here: */
+}
+
+/* Add grid-area properties to each item */
+.bento-a {
+  /* grid-area: a; */
+}
+
+.bento-b {
+  /* Your code here */
+}
+
+.bento-c {
+  /* Your code here */
+}
+
+.bento-d {
+  /* Your code here */
+}
+
+.bento-e {
+  /* Your code here */
+}
+
+.bento-f {
+  /* Your code here */
+}
+
+.bento-g {
+  /* Your code here */
+}
+
+.bento-h {
+  /* Your code here */
+}
+
+
+/* * 4. Add a media query for screens < 768px
+ * Inside, override the grid template properties
+ * to make it a single column.
+*/
+
+@media (max-width: 767px) {
+  #task-11-grid {
+    /* Your code here */
+    /* Hint: You may need to unset grid-template-areas */
+  }
+
+  /* * Hint: You may also need to unset the grid-area
+   * for each bento item so they stack naturally.
+  */
+  .bento-a,
+  .bento-b,
+  .bento-c,
+  .bento-d,
+  .bento-e,
+  .bento-f,
+  .bento-g,
+  .bento-h {
+    /* Your code here */
+  }
+}
