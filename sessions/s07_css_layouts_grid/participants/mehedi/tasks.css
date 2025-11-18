@@ -6,7 +6,6 @@
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
-  /* Your code here */
 }
 
 
@@ -18,7 +17,6 @@
   display: grid;
   gap: 40px 20px;
   grid-template-columns: 1fr 1fr 1fr;
-  /* Your code here */
 }
 
 
@@ -32,11 +30,10 @@
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr; 
   
-  /* Your code here */
 }
 
 .task-3-header {
-  /* Your code here */
+  
   grid-column: span 3;
 }
 
@@ -54,33 +51,32 @@
     "sidebar main"
     "footer footer";
     gap: 10px;
-  /* Your code here */
+
 }
 
 .task-4-header {
   grid-area: header;
     grid-column: span 5;
 
-  /* Your code here */
+  
 }
 
 .task-4-sidebar {
   grid-area: sidebar;
   grid-column: span 1;
-  /* Your code here */
+  
 }
 
 .task-4-main {
   grid-area: main;
   grid-column: span 4;
-  /* Your code here */
+  
 }
 
 .task-4-footer {
   grid-area: footer;
     grid-column: span 5;
 
-  /* Your code here */
 }
 
 
@@ -93,7 +89,7 @@
   display: grid;
   grid-template-columns: 150px 1fr 150px;
   gap: 15px;
-  /* Your code here */
+  
 }
 
 
@@ -108,7 +104,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   grid-auto-rows: 100px;
-  /* Your code here */
+  
 }
 
 
@@ -120,7 +116,6 @@
 #task-7-grid {
   display: grid;
   place-items: center;
-  /* Your code here */
 }
 
 
@@ -131,7 +126,8 @@
 */
 #task-8-grid {
   display: grid;
-  /* Your code here */
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 
@@ -143,7 +139,6 @@
 */
 #task-9-grid {
   display: grid;
-  /* Your code here */
 }
 
 .task-9-nested {
