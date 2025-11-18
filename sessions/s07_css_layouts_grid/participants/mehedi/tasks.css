@@ -211,40 +211,47 @@
 */
 #task-11-grid {
   display: grid;
-  /* Your code here: */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  grid-template-areas: 
+    "a a b c"
+    "a a d d"
+    "e e f g"
+    "e e h h";
 }
 
 /* Add grid-area properties to each item */
 .bento-a {
-  /* grid-area: a; */
+  grid-area: a;
 }
 
 .bento-b {
-  /* Your code here */
+  grid-area: b;
 }
 
 .bento-c {
-  /* Your code here */
+  grid-area: c;
 }
 
 .bento-d {
-  /* Your code here */
+  grid-area: d;
 }
 
 .bento-e {
-  /* Your code here */
+  grid-area: e;
 }
 
 .bento-f {
-  /* Your code here */
+  grid-area: f;
 }
 
 .bento-g {
-  /* Your code here */
+  grid-area: g;
 }
 
 .bento-h {
-  /* Your code here */
+  grid-area: h;
 }
 
 
@@ -255,8 +262,12 @@
 
 @media (max-width: 767px) {
   #task-11-grid {
-    /* Your code here */
-    /* Hint: You may need to unset grid-template-areas */
+    grid-area: unset;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+
   }
 
   /* * Hint: You may also need to unset the grid-area
@@ -270,6 +281,7 @@
   .bento-f,
   .bento-g,
   .bento-h {
-    /* Your code here */
+   
+    grid-area: unset;
   }
 }
